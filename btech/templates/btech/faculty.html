@@ -1,0 +1,204 @@
+{% extends 'adminapp/alayout.html' %}
+{% block content %}
+<link rel="stylesheet" href="../static/adminapp/css/main2.css">
+
+<div class="header-height" style="height: 130px;"></div>
+
+<div class="main-content">
+
+  
+<style>
+  .wrapper {
+     width: 116%;
+     margin: auto;
+ }
+</style>
+ 
+
+
+  <div class="topImg clearfix wrapper">
+
+                
+
+    <!--  <img src="../static/adminapp/img/banner.jpg" alt="About Us">-->
+
+      <div class="container">
+
+       <p>Computer Science &amp; Engineering - Faculty</p>
+
+      </div>
+
+  </div>
+
+
+
+<div class="wrapper">
+
+  <div class="container">
+
+  <div class="row">                  
+
+              <div class="blog col-md-9 clearfix">
+
+      <div class="row">
+
+      
+
+        {% for x in fac %}
+
+
+<div class="col-md-4 clearfix">
+                <div class="box faculty">
+                <h4><a href="{% url 'btech_faculties' id=x.id %}">
+          {{x.name}}</a></h4>
+                <p> {{x.designation}}</p>
+                <div class="boxInfo">
+                  <div class="faculty-img-box">
+                  <div class="faculty-innerbox">
+  <a href="{% url 'btech_faculties' id=x.id %}">
+                  <img class=" img-responsive" src="{{x.photo.url}}" alt="" style="height:201px;">
+  </a>
+                  </div>
+                  </div>
+                  <div><h6>{{x.qualification}}</h6>
+                  <p></p>
+  <h5><strong>Experience : {{x.experience}}</strong></h5>
+  </div>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+
+
+            <!-- <div class="col-md-4 clearfix">
+                <div class="box faculty">
+          Lakshmi S Dutt</a></h4>
+                <p>Asst. Professor</p>
+                <div class="boxInfo">
+                  <div class="faculty-img-box">
+                  <div class="faculty-innerbox">
+                  <img class=" img-responsive" src="../static/adminapp/img/faculty/Lekshmi Dutt.jpeg" alt="">
+  </a>
+                  </div>
+                  </div>
+                  <div><h6>MTech in Computer Science</h6>
+                  <p></p>
+  <h5><strong>Experience : 3Years 9 Months</strong></h5>
+  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 clearfix">
+                <div class="box faculty">
+                <h4><a href="{% url 'minnukbenny'%}">
+          Minnu K Benny</a></h4>
+                <p>Asst. Professor</p>
+                <div class="boxInfo">
+                  <div class="faculty-img-box">
+                  <div class="faculty-innerbox">
+  <a href="{% url 'minnukbenny'%}">
+                  <img class=" img-responsive" src="../static/adminapp/img/faculty/minnukbenny.jpg" alt="">
+  </a>
+                  </div>
+                  </div>
+                  <div><h6>MTech in Civil Engineering</h6>
+                  <p></p>
+  
+  </div>
+                </div>
+              </div>
+            </div><div class="clear"></div><div class="col-md-4 clearfix">
+                <div class="box faculty">
+                <h4><a href="http://www.kvmce.in/staff/119/calixtusvincent">
+          Calixtus Vincent</a></h4>
+                <p>Asst. Professor</p>
+                <div class="boxInfo">
+                  <div class="faculty-img-box">
+                  <div class="faculty-innerbox">
+  <a href="http://www.kvmce.in/staff/119/calixtusvincent">
+                  <img class=" img-responsive" src="http://www.kvmce.in/files/faculty/711367638.png" alt="">
+  </a>
+                  </div>
+                  </div>
+                  <div><h6>MTech in Computer Intergrated Manufacturing</h6>
+                  <p></p>
+  <h5><strong>Experience : 4 years</strong></h5>
+  </div>
+                </div>
+              </div>
+            </div><div class="col-md-4 clearfix">
+                <div class="box faculty">
+                <h4><a href="http://www.kvmce.in/staff/120/seershadas">
+          SEERSHA DAS</a></h4>
+                <p>Asst. Professor</p>
+                <div class="boxInfo">
+                  <div class="faculty-img-box">
+                  <div class="faculty-innerbox">
+  <a href="http://www.kvmce.in/staff/120/seershadas">
+                  <img class=" img-responsive" src="http://www.kvmce.in/files/faculty/8560826666.jpeg" alt="">
+  </a>
+                  </div>
+                  </div>
+                  <div><h6>M.Sc Mathematics, B.ed Mathematics, D.C.A</h6>
+                  <p></p>
+  <h5><strong>Experience : 9 Months</strong></h5>
+  </div>
+                </div>
+              </div>
+            </div>
+
+     
+ -->
+
+
+  </div>            
+
+      </div>
+
+      
+
+      <div id="sidebar" class="col-md-3 clearfix">
+
+<div class="searchCourse clearfix">
+
+          <!-- <ul><li><a href="http://www.kvmce.in/department/computer-science-engineering/introduction"><button type="button" class="btn btn-box">Introduction</button></a></li><li><a href="http://www.kvmce.in/department/computer-science-engineering/faculty">
+
+          <button type="button" class="btn btn-box">List of Faculty</button> -->
+
+          </a></li></ul>
+
+      </div>
+
+          <div class="clearfix">
+
+          
+
+              <div class="box">
+
+                          <!-- <h4>Related Links</h4> -->
+
+                           <div class="boxInfo archives">
+
+           <!-- <ul><li><a href="http://www.kvmce.in/department/computer-science-engineering/innovative-project-cse">Innovative Project Works</a></li><li><a href="http://www.kvmce.in/pages/btech-govt-quota">Admission - Govt Quota </a></li><li><a href="http://www.kvmce.in/pages/btech-mgmt-quota">Admission - Management Quota</a></li><li><a href="http://www.kvmce.in/pages/btech-nri-quota	">Admission- NRI Quota</a></li></ul></div> -->
+
+                            </div>
+
+              
+
+          </div>   
+
+                   
+
+      </div>
+
+</div>
+
+      <div class="clear"></div>
+
+
+
+      </div>
+
+  </div>    
+    {% endblock %}
+

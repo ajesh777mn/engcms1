@@ -1,0 +1,688 @@
+<html
+    class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths"
+    lang="en" style="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="DynamicLayers">
+
+    <title>KVM || College Of Engineering &amp; IT</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="../static/adminapp/img/logo/logo_KVM.png">
+
+
+    <!-- Font Awesome Icons CSS -->
+    <link rel="stylesheet" href="../static/adminapp/css/fontawesome.min.css">
+    <!-- Themify Icons CSS -->
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <!-- Elegant Font Icons CSS -->
+    <link rel="stylesheet" href="../static/adminapp/css/elegant-font-icons.css">
+    <!-- Elegant Line Icons CSS -->
+    <link rel="stylesheet" href="../static/adminapp/css/elegant-line-icons.css">
+    <!-- Flat Icons CSS -->
+    <link rel="stylesheet" href="../static/adminapp/css/flaticon.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../static/adminapp/css/bootstrap.min.css">
+    <!-- Venobox CSS -->
+    <link rel="stylesheet" href="../static/adminapp/css/venobox/venobox.css">
+    <!-- OWL-Carousel CSS -->
+    <link rel="stylesheet" href="../static/adminapp/css/owl.carousel.css">
+    <!-- Nice Select CSS -->
+    <link rel="stylesheet" href="../static/adminapp/css/nice-select.css">
+    <!-- Slick Nav CSS -->
+    <link rel="stylesheet" href="../static/adminapp/css/slicknav.min.css">
+    <!-- Css Animation CSS -->
+    <link rel="stylesheet" href="../static/adminapp/css/css-animation.min.css">
+    <!-- Nivo Slider CSS -->
+    <link rel="stylesheet" href="../static/adminapp/css/nivo-slider.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../static/adminapp/css/main.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="../static/adminapp/css/responsive.css">
+    
+
+    <script src="../static/adminapp/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+
+<body class="loaded" style="margin-bottom: 557px;">
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div class="site-preloader-wrap">
+        <div class="spinner"></div>
+    </div><!-- Preloader -->
+
+    <header id="header" class="header-section fadeIn animated cssanimation" data-scroll-id="header" tabindex="-1"
+        style="outline: none;">
+        <div class="top-header">
+            <div class="container">
+                <div class="top-content-wrap row">
+                    <div class="col-lg-8">
+                        <ul class="left-info">
+                            
+                            <li><a href="#"><i class="ti-home"></i>Approved by AICTE</a></li>
+                            <li><a href="#"><i class="ti-email"></i>Affiliated to APJAKTU</a></li>
+
+                            <a  data-scroll="" class="default-btn3">Institution code : KVE</a>
+                            
+                            
+                            <!--   <li><a href="#"><i class="ti-mobile"></i>+(333) 052 39876</a></li>  -->
+
+                            <!--- <div> 
+                            <marquee behavior="scroll" direction="left"><b>Urgent requirements for kvm students....plz do immediate....!click here to join<a href="#"></a></b></marquee>
+                          </div>  -->
+                          {% for x in notif %}
+
+                            <marquee class="li" direction=”right” onmouseover="stop()" onmouseout="start()"><a href="{% url 'notification' id=x.id %}">* {{x.marquee_text}} | &lt;click here&gt; ★</marquee></a>
+                            {% endfor %}
+
+
+
+
+
+
+                        </ul>
+                    </div>
+                    <!--
+                    <div class="col-lg-4 d-none d-lg-block">
+                        <ul class="right-info">
+                            <li>Follow Us</li>
+                            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>      -->
+                </div>
+            </div>
+        </div><!-- /.top-header -->
+        <div class="bottom-header">
+            <div class="container">
+                <div class="bottom-content-wrap row">
+                    <div class="slicknav_menu"><a href="#" aria-haspopup="true" role="button" tabindex="0"
+                            class="slicknav_btn slicknav_collapsed" style="outline: none;"><span
+                                class="slicknav_menutxt"></span><span class="slicknav_icon slicknav_no-text"><span
+                                    class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span><span
+                                    class="slicknav_icon-bar"></span></span></a>
+                        <ul class="slicknav_nav slicknav_hidden" aria-hidden="true" role="menu" style="display: none;">
+                            <li class="active slicknav_collapsed slicknav_parent"><a href="#" role="menuitem"
+                                    aria-haspopup="true" tabindex="-1" class="slicknav_item slicknav_row"
+                                    style="outline: none;"> <a href="{% url 'index' %}" tabindex="-1">Home</a>
+                                    <!-- <span class="slicknav_arrow">►</span></a> -->
+                                <!-- <ul role="menu" class="slicknav_hidden" aria-hidden="true" style="display: none;">
+                                    <li><a href="index.html" role="menuitem" tabindex="-1">Home Default</a></li>
+                                    <li><a href="index-2.html" role="menuitem" tabindex="-1">Home Modern</a></li>
+                                    <li><a href="index-3.html" role="menuitem" tabindex="-1">Home Classic</a></li>
+                                    <li><a href="index-5.html" role="menuitem" tabindex="-1">Home Background Img</a>
+                                    </li>
+                                    <li><a href="index-4.html" role="menuitem" tabindex="-1">Home Video Bg</a></li>
+                                </ul> -->
+                            </li>
+                            <li class="slicknav_collapsed slicknav_parent"><a href="#" role="menuitem"
+                                    aria-haspopup="true" tabindex="-1" class="slicknav_item slicknav_row"
+                                    style="outline: none;"><a href="http://kvmtrust.in/" tabindex="-1">KVM Trust</a>
+                                    <!-- <span class="slicknav_arrow">►</span></a>
+                                <ul role="menu" class="slicknav_hidden" aria-hidden="true" style="display: none;">
+                                    <li><a href="about.html" role="menuitem" tabindex="-1">About Us</a></li>
+                                    <li><a href="about-2.html" role="menuitem" tabindex="-1">About Us 2</a></li>
+                                </ul> -->
+                            </li>
+
+
+
+
+                            <!-- <li><a href="services.html" role="menuitem" tabindex="-1">Services</a></li> -->
+                            <li class="slicknav_collapsed slicknav_parent"><a href="#" role="menuitem"
+                                    aria-haspopup="true" tabindex="-1" class="slicknav_item slicknav_row"
+                                    style="outline: none;"><a href="{% url 'profile' %}" tabindex="-1">About</a>
+                                    <span class="slicknav_arrow">►</span></a>
+                                <ul role="menu" class="slicknav_hidden" aria-hidden="true" style="display: none;">
+                                    <li><a href="{% url 'profile' %}" role="menuitem" tabindex="-1">Profile</a></li>
+                                    <li><a href="{% url 'kvmtrust' %}" role="menuitem" tabindex="-1">KVM Trust</a></li>
+                                    <li><a href="{% url 'approval_recognition' %}" role="menuitem" tabindex="-1">Approval Recognition </a></li>
+                                    <li><a href="{% url 'principal' %}" role="menuitem" tabindex="-1">Principal</a></li>
+                                    <li><a href="{% url 'Vision_Mission' %}" role="menuitem" tabindex="-1">Vision Mission</a></li>
+                               
+                                </ul>
+                            </li>
+                            <li class="slicknav_collapsed slicknav_parent"><a href="#" role="menuitem"
+                                    aria-haspopup="true" tabindex="-1" class="slicknav_item slicknav_row"
+                                    style="outline: none;"><a href="#" tabindex="-1">Pages</a>
+                                    <span class="slicknav_arrow">►</span></a>
+                                <ul role="menu" class="slicknav_hidden" aria-hidden="true" style="display: none;">
+                                    <li><a href="team.html" role="menuitem" tabindex="-1">Team</a></li>
+                                    <li><a href="404.html" role="menuitem" tabindex="-1">404 Not Found</a></li>
+                                </ul>
+                            </li>
+                            <li class="slicknav_collapsed slicknav_parent"><a href="#" role="menuitem"
+                                    aria-haspopup="true" tabindex="-1" class="slicknav_item slicknav_row"
+                                    style="outline: none;"><a href="blog-grid.html" tabindex="-1">Blog</a>
+                                    <span class="slicknav_arrow">►</span></a>
+                                <ul role="menu" class="slicknav_hidden" aria-hidden="true" style="display: none;">
+                                    <li><a href="blog-grid.html" role="menuitem" tabindex="-1">Blog Grid</a></li>
+                                    <li><a href="blog-sidebar.html" role="menuitem" tabindex="-1">Blog Sidebar</a></li>
+                                    <li><a href="blog-single.html" role="menuitem" tabindex="-1">Blog Single</a></li>
+                                </ul>
+                            </li>
+                            <li> <a href="contact.html" role="menuitem" tabindex="-1">Contact</a></li>
+                        </ul>
+                    </div>
+
+
+
+
+
+                    <!--main navbar statrting-->
+
+                    <div class="col-md-3">
+                        <div class="site-branding">
+                            <a href="{% url 'index' %}"><img src="../static/adminapp/img/englogo.png" alt="Brand"></a>
+                        </div>
+                    </div>
+                    <div class="col-md-9 text-right">
+                        <ul id="mainmenu" class="nav navbar-nav nav-menu">
+                            <li class="active"> <a href="{% url 'index' %}">Home</a>
+                                <!-- <ul>
+                                    <li><a href="{% url 'index' %}">Home Default</a></li>
+                                    <li><a href="index-2.html">Home Modern</a></li>
+                                    <li><a href="index-3.html">Home Classic</a></li>
+                                    <li><a href="index-5.html">Home Background Img</a></li>
+                                    <li><a href="index-4.html">Home Video Bg</a></li>
+                                </ul> -->
+                            </li>
+                            <li><a href="http://kvmtrust.in/" target="_blank">KVM Trust</a>
+
+                            <li><a href="{% url 'profile' %}">About</a>
+                                <ul>
+                                    <li><a href="{% url 'profile' %}">profile</a></li>
+                                    <li><a href="{% url 'kvmtrust' %}">KVM Trust</a></li>
+                                    <li><a href="{% url 'approval_recognition' %}">Approval & Recognition</a></li>
+                                    <li><a href="{% url 'principal' %}">Principal</a></li>
+                                    <li><a href="{% url 'Vision_Mission' %}">Vision & Mission</a></li>
+
+                                </ul>
+                            </li>
+
+                            <li><a href="#">Academics</a>
+
+                                <ul>
+                                    <li><a href="#">Library</a>
+                                        <ul class="sub-menu-wrapper">
+                                            <li class="sub-menu-item"> <a href="{% url 'libintroduction1' %}">Introduction</a></li>
+                                            <li class="sub-menu-item"><a href="{% url 'libfaculty'%}">Faculty</a></li>
+
+                                        </ul>
+                                    </li>
+
+                                    <li><a href="#">Computer Science &Engineering</a>
+                                        <ul class="sub-menu-wrapper">
+                                            <li class="sub-menu-item"><a href="{% url 'engintroduction'%}">Introduction</a></li>
+                                            <li class="sub-menu-item"><a href="{% url 'btechgovt'%}">Admission-Govt Quota</a></li>
+                                            <li class="sub-menu-item"><a href="{% url 'btechmgt'%}">Admission-Management Quota</a></li>
+                                            <li class="sub-menu-item"><a href="{% url 'btechnri'%}">Admission-NRI Quota</a></li>
+                                            <li class="sub-menu-item"><a href="{% url 'faculty'%}">Faculty</a></li>
+
+                                        </ul>
+                                    </li>
+
+                                    <li><a href="#">MCA</a>
+                                        <ul class="sub-menu-wrapper">
+                                            <li class="sub-menu-item"> <a href="{% url 'mcaintro'%}">Introduction</a></li>
+                                            <li class="sub-menu-item"><a href="{% url 'mcaadmission'%}">Admission</a></li>
+                                            <li class="sub-menu-item"><a href="{% url 'mcasyllabus'%}">Syllabus</a></li>
+                                            <li class="sub-menu-item"><a href="{% url 'mcaprequestions'%}">MCA Previous Questions KTU</a></li>
+                                            <li class="sub-menu-item"><a href="{% url 'mcaextra'%}">Extracurricular-activities</a></li>
+                                            <li class="sub-menu-item"><a href="{% url 'mcafaculty'%}">Faculty</a></li>
+
+                                        </ul>
+                                    </li>
+
+                                    <li><a href="#">MBA</a>
+                                        <ul class="sub-menu-wrapper">
+                                            <li class="sub-menu-item"> <a href="{% url 'mbaintro'%}">Introduction</a></li>
+                                            <li class="sub-menu-item"><a href="{% url 'mbaadmission'%}">Admission</a></li>
+                                            <li class="sub-menu-item"><a href="{% url 'mbabrochure'%}">Brochure</a></li>
+                                            <li class="sub-menu-item"><a href="{% url 'mbaambassodors'%}">Ambassodors</a></li>
+                                            <li class="sub-menu-item"><a href="{% url 'mbafaculty'%}">Faculty</a></li>
+
+                                        </ul>
+                                    </li>
+
+
+                                    <li><a href="#">Basic Science</a>
+                                        <ul class="sub-menu-wrapper">
+                                            <li class="sub-menu-item"> <a href="{% url 'basicintro'%}">Introduction</a></li>
+                                            <li class="sub-menu-item"><a href="{% url 'basicfaculty'%}">Faculty</a></li>
+
+                                        </ul>
+                                    </li>
+
+
+                        </ul>
+                        </li>
+                        <li><a href="#">Admission</a>
+                            <ul>
+                                <li><a href="{% url 'courses'%}">Courses</a></li>
+                                <li><a href="{% url 'enquiry_form'%}">Pre-Enquiry form</a></li>
+                                <li><a href="{% url 'eligibility_criteria'%}">Eligibility Criteria</a></li>
+                                <li><a href="{% url 'scholarships'%}">Scholarships</a></li>
+                                <li><a href="http://application.kvmce.in/" target="_blank">Apply Online</a></li>
+
+
+
+                            </ul>
+                        </li>
+                        <li><a href="#">Student Life</a>
+                            <ul>
+                                <li><a href="{% url 'curricular'%}">Curricular</a></li>
+                                <li><a href="{% url 'co_curricular'%}">Co-curricular</a></li>
+                                <li><a href="{% url 'photogallery'%}">Photo Gallery</a></li>
+                                <li><a href="{% url 'transportation'%}">Transportation</a></li>
+                                <li><a href="{% url 'hostel'%}">Hostel</a></li>
+                                <li><a href="{% url 'iedc'%}">IEDC</a></li>
+                                <li><a href="{% url 'nature_club'%}">Nature Club</a></li>
+                                <li><a href="{% url 'University_Guidelines'%}">University Guidelines</a></li>
+                                <!-- <li><a href="{% url 'scholarships'%}">Photo Gallery</a></li>
+                                <li><a href="{% url 'scholarships'%}">Photo Gallery</a></li> -->
+
+
+
+                            </ul>
+                        </li>
+                        <li><a href="{% url 'placement'%}">Placement</a></li>
+
+                        <li><a href="#">AMS</a>
+                            <ul>
+                                <li><a href="https://kvm.campusgenie.co.in/login" target="_blank">Faculty Login</a></li>
+                                <li><a href="https://kvm.campusgenie.co.in/student/login" target="_blank">Student Login</a></li>
+                                <li><a href="https://kvm.campusgenie.co.in/parent/login" target="_blank">Parent Login</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href=" {% url 'contact_us'%}">Contact</a>
+                            <ul>
+                                <li><a href="{% url 'route_map'%}">Route Map</a></li>
+                                <li><a href="{% url 'contact_us'%}">Contact Us</a></li>
+                            </ul>
+                        </li>
+
+                        </ul>
+                        <a href="{% url 'information_corner'%}" data-scroll="" class="default-btn">Information corner</a>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.bottom-header -->
+
+    </header><!-- /.header-section -->
+
+
+    {% block content %}
+    {% endblock %}
+
+
+
+    <style>
+  
+  
+
+    </style>
+            <h4>Our  Placements</h4>
+            <style>
+                h4{
+      text-align:center;
+      padding: 20px;
+      font-size: 24px;
+
+      /* background-color: #fa4d02; */
+      
+
+    }
+    
+            </style>
+
+    
+    <div class="slider">
+        
+        
+        <div class="slide-track">
+            <div class="slide">
+                <img src="../static/adminapp/img/companies/wipro.png" height="70" width="120" alt="" />
+            </div>
+            <div class="slide">
+                <img src="../static/adminapp/img/companies/tcs3.png" height="70" width="120" alt="" />
+            </div>
+            <div class="slide">
+                <img src="../static/adminapp/img/companies/techm.png" height="70" width="120" alt="" />
+            </div>
+            <div class="slide">
+                <img src="../static/adminapp/img/companies/ust.png" height="70" width="120" alt="" />
+            </div>
+            <div class="slide">
+                <img src="../static/adminapp/img/companies/accen.png" height="70" width="120" alt="" />
+            </div>
+            <div class="slide">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="70" width="120" alt="" />
+            </div>
+            <div class="slide">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="70" width="120" alt="" />
+            </div>
+            <div class="slide">
+                <img src="../static/adminapp/img/companies/icici.png" height="70" width="120" alt="" />
+            </div>
+            <div class="slide">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="70" width="120" alt="" />
+            </div>
+            <div class="slide">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="70" width="120" alt="" />
+            </div>
+            <div class="slide">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="70" width="120" alt="" />
+            </div>
+            <div class="slide">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="70" width="120" alt="" />
+            </div>
+            <div class="slide">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="70" width="120" alt="" />
+            </div>
+            <div class="slide">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="70" width="120" alt="" />
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!--Placement logo scroll-->
+    <!-- <div>
+        <a  data-scroll="" class="default-btn2">Our Placements</a>
+
+        <style>
+            .default-btn2 {
+                background-color: #fa4d02;
+                 color: #fff;
+                    line-height: 45px;
+                    display: inline-block;
+                    padding: 0 35px;
+                    border-radius: 3px;
+                    font-family: "Poppins",sans-serif;
+                    font-size: 18px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    position: absolute;
+
+                        }
+
+
+        </style>
+
+        <marquee class="mq" li2 behavior="scroll" direction="left">
+            <style>
+                .mq {
+                    float: right;
+                    background: #f0ebf0;
+                    color: rgb(245, 240, 240);
+                    width: 88%;
+                    padding: 0%;
+                    margin: -1% -6%;
+                    height: 56px;
+                }
+            </style>
+            
+
+            <img src="../static/adminapp/img/companies/wipro.png" width="120" height="60" alt="kvm" />
+            <img src="../static/adminapp/img/companies/tcs3.png" width="120" height="60" alt="kvm" />
+            <img src="../static/adminapp/img/companies/techm.png" width="120" height="60" alt="kvm" />
+            <img src="../static/adminapp/img/companies/ust.png" width="120" height="60" alt="kvm" />
+            <img src="../static/adminapp/img/companies/icici.png" width="120" height="60" alt="kvm" />
+            <img src="../static/adminapp/img/companies/hdfc.png" width="120" height="60" alt="kvm" />
+            <img src="../static/adminapp/img/companies/accen.png" width="120" height="60" alt="kvm" />
+
+        </marquee>
+    </div> -->
+        <!-- <h7>Our Placements </h7>
+        <style>
+           h7 {
+
+                color: #ff2907;
+                font-size: 25;
+                font-family: 'time';
+            }
+            
+        </style> -->
+
+    </div>
+    <!---placement logos-->
+    <!-- <div class="stripe clearfix">
+
+        <div class="twitter">
+
+          <marquee><p style="font-family: Impact; font-size: 18pt">
+
+                                       </p><ul><li>
+
+                                           <a href="#">
+
+                                        <img src="../static/adminapp/img/companies/wipro.png">
+
+                                           </a>
+
+                                         </li><li>
+
+                                           <a href="#">
+
+                                        <img src="http://www.kvmce.in/files/menuboxes/549343719.jpg">
+
+                                           </a>
+
+                                         </li><li>
+
+                                           <a href="#">
+
+                                        <img src="http://www.kvmce.in/files/menuboxes/173461110.jpg">
+
+                                           </a>
+
+                                         </li><li>
+
+                                           <a href="#">
+
+                                        <img src="http://www.kvmce.in/files/menuboxes/248379441.jpg">
+
+                                           </a>
+
+                                         </li><li>
+
+                                           <a href="#">
+
+                                        <img src="http://www.kvmce.in/files/menuboxes/1253989137.png">
+
+                                           </a>
+
+                                         </li><li>
+
+                                           
+
+                                        <img src="http://www.kvmce.in/files/menuboxes/153279204.jpg">
+
+                                           
+
+                                         </li><li>
+
+                                           
+
+                                        <img src="http://www.kvmce.in/files/menuboxes/1155102104.jpg">
+
+                                           
+
+                                         </li><li>
+
+                                           <a href="#">
+
+                                        <img src="http://www.kvmce.in/files/menuboxes/170405853.jpg">
+
+                                           </a>
+
+                                         </li></ul>                   
+
+                                       <p></p></marquee>
+
+        </div>
+
+    </div>
+    <div class="mail">
+
+        <div>
+
+          ddd  
+
+            <span class="triangle">triangle</span>
+
+            <span class="element rightElement">
+
+            <div class="plc">
+
+            Our Placements</div> </span>
+
+        </div> 
+
+    </div> -->
+
+
+
+
+    </div><!-- /.main-content -->
+
+
+
+
+
+    <footer class="footer-section sticky-footer">
+        <div class="container">
+            <div class="widget-wrap row">
+
+                <div class="col-lg-3 col-md-6 sm-padding">
+                    <div class="widget-content">
+                        <img src="../static/adminapp/img/media.jpg" height="80" width="179"alt="logo">
+                        <p><a href="{% url 'media_update'%}">What media say about KVM</a></p>
+                        <ul class="social-icon">
+                            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 sm-padding">
+                    <div class="widget-content">
+                        <h3>Downloads</h3>
+                        <ul class="widget-link">
+                            <li><a href="{% url 'enquiry_form'%}">Application Form <span></span></a></li>
+                            <li><a href="{% url 'brochures'%}">KVM Brochure<span></span></a></li>
+                            <!--        <li><a href="#">Essentials bonds and insurance for construction. <span>- 3 Year Ago</span></a></li>
+  -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 sm-padding">
+                    <div class="widget-content">
+                        <h3>Usefull Tags</h3>
+                        <ul class="tags">
+                            <li><a href="{% url 'photogallery'%}">Photo Gallery</a></li> <br>
+
+                            <li><a href="{% url 'events'%}">Latest Events</a></li> <br>
+
+                            <li><a href="{% url 'notice_board'%}">Notice Board</a></li>
+                            <li><a href="{% url 'useful_links'%}">Useful Links</a></li>
+                            <li><a href="{% url 'index'%}">Apply Online</a></li>
+                            <li><a href="{% url 'alumni'%}">Alumni</a></li>
+                            <!-- <li><a href="#">Calendar</a></li> -->
+                            <li><a href="{% url 'placement'%}">Placement Cell</a></li>
+                            <li><a href="{% url 'mandatory_discl'%}">Mandatory Disclosure</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 sm-padding">
+                    <div class="widget-content">
+                        <h3>Contact Us</h3>
+                        <ul class="address">
+                            <!--         <li><i class="ti-world"></i> Www.YourWebsite.com</li>   -->
+                            <li><i class="ti-location-pin"></i>KVM College Road, Kokkothamangalam P.O
+                                Cherthala, Alappuzha, Kerala, India. 688 527</li>
+                            <li><i class="ti-mobile"></i> Phone 0478 - 2811080, 2811707
+                                Fax 91-478-2811707.</li>
+                            <li><i class="ti-email"></i> e-mail : kvmceit@gmail.com</li>
+
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright-section">
+                <div class="row">
+                    <div class="col-md-6 sm-padding">
+                        <div class="copyright">© 2022 KVM . Developed by Ajesh.MN</div>
+                    </div>
+                    <div class="col-md-6 sm-padding">
+                        <ul class="footer-social">
+                            <li><a href="#">Site Map</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Report Problem</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--./footer-section -->
+
+    <a data-scroll="" href="#header" id="scroll-to-top" style="display: none;"><i class="arrow_up"></i></a>
+
+    <!-- jQuery Lib -->
+    <script src="../static/adminapp/js/vendor/jquery-1.12.4.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="../static/adminapp/js/vendor/bootstrap.min.js"></script>
+    <!-- Tether JS -->
+    <script src="../static/adminapp/js/vendor/tether.min.js"></script>
+    <!-- Imagesloaded JS -->
+    <script src="../static/adminapp/js/vendor/imagesloaded.pkgd.min.js"></script>
+    <!-- OWL-Carousel JS -->
+    <script src="../static/adminapp/js/vendor/owl.carousel.min.js"></script>
+    <!-- isotope JS -->
+    <script src="../static/adminapp/js/vendor/jquery.isotope.v3.0.2.js"></script>
+    <!-- Smooth Scroll JS -->
+    <script src="../static/adminapp/js/vendor/smooth-scroll.min.js"></script>
+    <!-- venobox JS -->
+    <script src="../static/adminapp/js/vendor/venobox.min.js"></script>
+    <!-- Counterup JS -->
+    <script src="../static/adminapp/js/vendor/jquery.counterup.min.js"></script>
+    <!-- waypoints js -->
+    <script src="../static/adminapp/js/vendor/jquery.waypoints.v2.0.3.min.js"></script>
+    <!-- Slick Nav JS -->
+    <script src="../static/adminapp/js/vendor/jquery.slicknav.min.js"></script>
+    <!-- Nivo Slider JS -->
+    <script src="../static/adminapp/js/vendor/jquery.nivo.slider.pack.js"></script>
+    <!-- Nice Select JS -->
+    <script src="../static/adminapp/js/vendor/jquery.nice-select.min.js"></script>
+    <!-- YTPlayer JS -->
+    <script src="../static/adminapp/js/vendor/jquery.mb.YTPlayer.min.js"></script>
+    <!-- Wow JS -->
+    <script src="../static/adminapp/js/vendor/wow.min.js"></script>
+    <!-- Contact JS -->
+    <script src="../static/adminapp/js/contact.js"></script>
+    <!-- Quote JS -->
+    <script src="../static/adminapp/js/quote.js"></script>
+    <!-- Main JS -->
+    <script src="../static/adminapp/js/main.js"></script>
+
+
+</body>
+
+</html>

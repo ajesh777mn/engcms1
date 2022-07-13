@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content=
+	"width=device-width,initial-scale=1.0">
+
+	<!-- CSS only -->
+	<link href=
+"https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+		integrity=
+"sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+		crossorigin="anonymous" rel="stylesheet">
+
+	<!-- Html2Pdf -->
+	<script src=
+"https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.1/html2pdf.bundle.min.js"
+		integrity=
+"sha512vDKWohFHe2vkVWXHp3tKvIxxXg0pJxeid5eo+UjdjME3DBFBn2F8yWOE0XmiFcFbXxrEOR1JriWEno5Ckpn15A=="
+		crossorigin="anonymous">
+	</script>
+
+	<style>
+		.heading{
+		text-align: center;
+		color: #2F8D46;
+		}
+	</style>
+</head>
+
+<body>
+	<h2 class="heading">
+	Online Application form
+	</h2>
+
+	<!-- Form encrypted as text -->
+
+	<form id ="form-print" enctype="text/plain"
+	
+		class="form-control">
+
+		<label for="name">
+		<strong>Name: </strong>
+		</label>
+		<input class="form-control" type="text"
+		id="name" name="Name" placeholder="Enter Name">
+		<br>
+
+		<label for="age">
+		<strong>Enter Age: </strong>
+		</label>
+		<input class="form-control" type="text"
+		id="age" name="Age" placeholder="Enter Age">
+		<br>
+
+		<label for="subject">
+		<strong>Select Subject: </strong>
+		</label>
+		<select class="form-control"
+			id="subject" name="subject">
+			<option value="Web">
+				Web development
+			</option>
+			<option value="App">
+				App development
+			</option>
+			<option value="Others">
+				Others
+			</option>
+		</select>
+		<br>
+		
+		<label for="message">
+		<strong>Enter Message </strong>
+		</label>
+		<textarea class= "form-control"
+		id="message" name="message"
+		placeholder="Enter you message"
+		style="height:100px">
+		</textarea>
+		<br>
+
+		<input type="button" class="btn btn-primary"
+		onclick="GeneratePdf();" value="GeneratePdf">
+	</form>
+				
+	<script>		
+		// Function to GeneratePdf
+		function GeneratePdf() {
+			var element = document.getElementById('form-print');	
+			element.style.display = 'block'
+			 html2pdf(element);
+			//  .save(); 
+		}
+
+// 		$(document).ready(function() {
+//   $("#pdfDownloader").click(function() {
+
+//     var doc = new jsPDF('p', 'pt', 'a4', true);
+
+//     doc.fromHTML($('#renderMe').get(0), 15, 15, {
+//       'width': 500
+//     }, function (dispose) {
+//     doc.save('thisMotion.pdf');
+//     });
+//   });
+// })
+// import html2canvas from 'html2canvas'
+// import jsPdf from 'jspdf'
+ 
+// function GeneratePdf () {
+//     const domElement = document.getElementById('your-id')
+//     html2canvas(domElement, { onclone: (document) => {
+//       document.getElementById('print-button').style.visibility = 'hidden'
+//     }})
+//     .then((canvas) => {
+//         const img = canvas.toDataURL('image/png')
+//         const pdf = new jsPdf()
+//         pdf.addImage(imgData, 'JPEG', 0, 0, width, height)
+//         pdf.save('your-filename.pdf')
+// })
+
+
+//   console.log('printPDF()');
+
+//   var worker = html2pdf().from(element).save();
+		
+// 		function printPDF() {
+//   var element = document.getElementById('element-to-print');
+//   element.style.display = 'block'
+//   html2pdf(element);
+//   element.style.display = 'none'
+//   console.log('printPDF()');
+
+
+// function GeneratePdf() {
+// 	let element = document.getElementById('form-print');
+// 				 html2pdf(element).saveas('sample-file.pdf');  }
+
+	// doc.save('sample-file.pdf'); }
+
+
+// New Promise-based usage:
+// var element = document.getElementById('form-print');
+// var opt = {
+// //   margin:       1,
+//   filename:     'myfile.pdf',
+// //   image:        { type: 'jpeg', quality: 0.98 },
+// //   html2canvas:  { scale: 2 },
+//   jsPDF:{ unit: 'in', format: 'letter', orientation: 'portrait' }
+// }
+
+// };
+// // New Promise-based usage:
+// html2pdf().set(opt).from(element).save();
+
+// function generatePDF() {
+//  var doc = new jsPDF();  //create jsPDF object
+//   doc.fromHTML(document.getElementById('form-print'), // page element which you want to print as PDF
+//   15,
+//   15, 
+//   {
+//     'width': 170  //set width
+//   },
+//   function(a) 
+//    {
+//     doc.save("HTML2PDF.pdf"); // save file name as HTML2PDF.pdf
+//   });
+// }
+
+	</script>
+
+	<script src=
+"https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+		integrity=
+"sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+		crossorigin="anonymous">
+	</script>
+</body>
+
+</html>

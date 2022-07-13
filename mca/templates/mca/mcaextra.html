@@ -1,0 +1,94 @@
+{% extends 'adminapp/alayout.html' %}
+{% block content %}
+
+
+<link rel="stylesheet" href="../static/adminapp/css/main2.css">
+
+<div class="header-height" style="height: 130px;"></div>
+
+<div class="main-content">
+
+    <style>
+
+h2 {
+    font-size: 36px;
+    color: #111;
+    margin: 0 0 8px;
+    font-weight: 600;
+    line-height: 23px;
+    letter-spacing: -1px;
+}
+
+
+
+    </style>
+
+
+
+
+
+
+    <div class="topImg clearfix wrapper">
+                
+        <img src="http://www.kvmce.in/img/slider/slider_01.jpg" alt="About Us">
+        <div class="container">
+         <p>M C A</p>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="container">
+        <div class="row">
+            <div class=" col-md-9  column clearfix">
+                <div class="box">
+                    <h4>Extracurricular activities</h4>
+                    <div class="boxInfo">
+                        
+                        <div>
+                        <p></p><h2>PSEUDOCAST NEWSLETTER</h2>
+
+<h2>​<img alt="" src="http://www.kvmce.in/frmedia/1628156545_0001.jpg" style="height:1158px; width:820px"><img alt="" src="http://www.kvmce.in/frmedia/1628156665_0002.jpg" style="height:1159px; width:820px"><img alt="" src="http://www.kvmce.in/frmedia/1628156680_0003.jpg" style="height:1159px; width:820px"><img alt="" src="http://www.kvmce.in/frmedia/1628156694_0004.jpg" style="height:1159px; width:820px"></h2>
+<p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sidebar" class="col-md-3 clearfix">
+<div class="searchCourse clearfix">
+                <!-- <ul><li><a href="http://www.kvmce.in/department/m-c-a/introduction"><button type="button" class="btn btn-box">Introduction</button></a></li><li><a href="http://www.kvmce.in/department/m-c-a/faculty">
+
+                                        <button type="button" class="btn btn-box">List of Faculty</button> -->
+
+                                        </a></li></ul>
+            </div>
+                <div class="clearfix">
+                
+                    <div class="box">
+
+                                        <h4>Related Links</h4>
+
+                                           <div class="boxInfo archives">
+
+                                         <ul><li><a href="{% url 'mcaadmission'%}">Admission </a></li>
+                                            <!-- <li><a href="http://www.kvmce.in/department/m-c-a/innovative-project-mca">Innovative Project Works</a></li> -->
+                                            <li><a href="{% url 'mcasyllabus'%}">Syllabus </a></li>
+                                            <li><a href="{% url 'mcaprequestions'%}">MCA Previous Questions KTU</a></li>
+                                            <!-- <li><a href="http://www.kvmce.in/department/m-c-a/extracurricular-activities">Extracurricular activities</a></li></ul></div> -->
+
+                                                </div>
+                    
+                </div>   
+                         
+            </div>
+</div>
+            <div class="clear"></div>
+
+            </div>
+        </div>
+    
+
+
+
+
+
+    {% endblock %}

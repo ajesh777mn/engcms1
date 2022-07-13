@@ -1,0 +1,117 @@
+{% extends 'adminapp/alayout.html' %}
+{% block content %}
+<link rel="stylesheet" href="../static/adminapp/css/main2.css">
+
+<div class="header-height" style="height: 130px;"></div>
+
+<div class="main-content">
+
+    <div class="topImg clearfix wrapper">
+                
+        <img src="http://www.kvmce.in/img/slider/slider_01.jpg">
+        <div class="container">
+        <p>Events</p>
+        </div>
+    </div>
+
+
+    <div class="wrapper">
+        <div class="container">
+        <div class="row">
+            <div class="blog col-md-9 clearfix">
+                <div class="box">
+                    {% for x in data %}
+
+
+                    <a href="{% url 'event_list' id=x.id %}"><h4>{{x.title1}}</h4></a>
+
+                    <div class="boxInfo examInfo">
+
+                      <ul>                                    
+
+                            <li class="dateExm">{{x.post_date}}</li>                                   
+
+                      </ul>
+
+                        <div>
+
+                            
+
+                          <p>{{x.title2}}</p>
+
+                            <a href="{% url 'event_list' id=x.id %}" class="submit"> Read more </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                {% endfor %}
+                <!-- <div class="box">
+
+
+                    <div class="boxInfo examInfo">
+
+                      <ul>                                    
+
+                            <li class="dateExm">Mar 21, 2017</li>                                   
+
+                      </ul>
+
+                        <div>
+
+                            
+
+                          <p>NATIONAL SEMINAR ON POTENTIALS OF BIOTECHNOLOGY</p>
+
+
+                        </div>
+
+                    </div> -->
+
+                    
+               
+                                     
+
+            <div id="sidebar" class="col-md-3 clearfix">
+
+                <div class="searchCourse clearfix">
+                    <ul> <li><a href="{% url 'kvmtrust' %}">
+
+                                <button type="button" class="btn btn-box">KVM Trust</button></a>
+
+                                </li> <li><a href="{% url 'courses'%}">
+
+                                <button type="button" class="btn btn-box">Our Courses</button></a>
+
+                                </li> <li><a href="{% url 'placement'%}">
+
+                                <button type="button" class="btn btn-box">Placements</button></a>
+
+                                </li> <li><a href="{% url 'university_update'%}">
+
+                                <button type="button" class="btn btn-box">University Updates</button></a>
+
+                                </li></ul>
+                </div>
+
+                 
+
+                
+
+                         
+                         
+            </div> 
+</div>
+</div>
+        </div>
+
+
+
+
+
+
+
+
+
+    {% endblock %}

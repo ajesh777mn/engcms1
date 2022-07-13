@@ -1,0 +1,195 @@
+{% extends 'adminapp/alayout.html' %}
+{% block content %}
+<link rel="stylesheet" href="../static/adminapp/css/main2.css">
+
+<div class="header-height" style="height: 130px;"></div>
+
+<div class="main-content">
+
+    <div class="topImg clearfix wrapper">
+
+                
+
+        <img src="http://www.kvmce.in/img/slider/slider_01.jpg" alt="About Us">
+
+        <div class="container">
+
+         <p>Faculty Profile</p>
+
+        </div>
+
+    </div>
+
+    <div class="wrapper">
+
+        <div class="container">
+
+        <div class="row">
+
+            <div class="blog col-md-9 clearfix">
+
+                <div class="box">
+
+                    <h4>DARSANA RAMACHANDRAN </h4>
+
+                    <div class="boxInfo examInfo">
+
+                        
+
+                        <div class="row"> 
+
+                        <div class="col-md-5">
+                        <div class="faculty-det-box">
+                        <div class="faculty-detbox">
+
+                       <img src="../static/adminapp/img/faculty/DARSANA RAMACHANDRAN.jpeg" alt="DARSANA RAMACHANDRAN " class=" img-responsive">
+                        
+                        </div>
+                      </div>
+                          <p></p><div class="event-vanue">
+
+                        <table>
+
+                          <tbody><tr>
+
+                            <td colspan="2"><h4>Profile Summary</h4></td>
+
+                          </tr>
+
+                          <tr>
+
+                            <td width="29%"><p class="color">Designation:</p></td>
+
+                            <td width="71%"><strong>Head of the Department, Associate Professor</strong></td>
+
+                          </tr>
+
+                          <tr>
+
+                            <td><p class="color">Qualifications:</p></td>
+
+                            <td><strong>MCA</strong></td>
+
+                          </tr>
+
+                          <tr>
+
+                            <td><p class="color">Date of Join: </p></td>
+
+                            <td><strong>2020-NOV-04</strong></td>
+
+                          </tr>
+
+                          <tr>
+
+                            <td><p class="color">Email: </p></td>
+
+                            <td><strong>hodmca@kvmce.in</strong></td>
+
+                          </tr>
+
+                          <tr>
+
+                            <td><p class="color">Experience: </p></td>
+
+                            <td><strong>13 Years</strong></td>
+
+                          </tr>
+
+                        </tbody></table>
+
+              </div> <p></p>
+
+                            </div>
+
+                            <div class="col-md-7">
+
+                            <p></p><p>Specialisation: DATA MINING</p>
+<p class="normal">Research Interest: DATA SCIENCE</p>
+<p>&nbsp;</p><p></p>
+
+                           </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+     <div>
+
+                <div class="box">
+
+                    
+
+                            
+
+                                                                
+
+                            
+
+                        
+
+                </div>
+
+            </div>
+
+            </div>
+
+            <div id="sidebar" class="col-md-3 clearfix">
+
+<div class="searchCourse clearfix">
+
+                <!-- <ul> <li><a href="http://www.kvmce.in/pages/kvm-trust">
+
+                                <button type="button" class="btn btn-box">KVM Trust</button></a>
+
+                                </li> <li><a href="http://www.kvmce.in/pages/courses">
+
+                                <button type="button" class="btn btn-box">Our Courses</button></a>
+
+                                </li> <li><a href="http://www.kvmce.in/pages/placement">
+
+                                <button type="button" class="btn btn-box">Placements</button></a>
+
+                                </li> <li><a href="http://www.kvmce.in/pages/university-updates">
+
+                                <button type="button" class="btn btn-box">University Updates</button></a>
+
+                                </li></ul> -->
+
+            </div>
+
+                <div class="clearfix">
+
+                
+
+                    <ul><li><a href="{% url 'mcaintro'%}"><button type="button" class="btn btn-box">M C A</button></a></li>
+                      <li><a href="{% url 'mcaadmission'%}"><button type="button" class="btn btn-box">Admission </button></a></li>
+                      <!-- <li><a href="http://www.kvmce.in/department/m-c-a/innovative-project-mca"><button type="button" class="btn btn-box">Innovative Project Works</button></a></li> -->
+                      <li><a href="{% url 'mcasyllabus'%}"><button type="button" class="btn btn-box">Syllabus </button></a></li>
+                      <li><a href="{% url 'mcaprequestions'%}"><button type="button" class="btn btn-box">MCA Previous Questions KTU</button></a></li>
+                      <li><a href="{% url 'mcaextra'%}"><button type="button" class="btn btn-box">Extracurricular activities</button></a></li>
+                      <li><a href="{% url 'mcafaculty'%}"><button type="button" class="btn btn-box">Faculty</button></a></li>
+
+                    
+
+                </ul></div>   
+
+                         
+
+            </div>
+
+</div>
+
+            <div class="clear"></div>
+
+
+
+            </div>
+
+        </div>
+
+
+
+{% endblock %}

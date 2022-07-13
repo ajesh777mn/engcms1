@@ -1,0 +1,93 @@
+{% extends 'adminapp/alayout.html' %}
+{% block content %}
+<link rel="stylesheet" href="../static/adminapp/css/main2.css">
+
+<div class="header-height" style="height: 130px;"></div>
+
+<div class="main-content">
+
+
+    <div class="wrapper">
+        <div class="container">
+        <div class="row">
+            <div class=" col-md-9  column clearfix">
+                <div class="box">
+                    <h4>Scholarships</h4>
+                    <div class="boxInfo">
+                        
+                        <div>
+                        <p></p><p style="text-align:justify">KVM Trust provides scholarships to those with outstanding academic records. The trust provides as many as 160 scholarships each year to meet the tuition expenses of deserving students.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Scolorships Details</strong></p>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0" style="width:498px">
+<tbody>
+<tr>
+    <td>Category 1</td>
+    <td>90% and above marks in PCM for HSE/CBSE/ISC and valid score in Entrance Examination</td>
+    <td>with KEAM</td>
+    <td>No Tuition fee</td>
+</tr>
+<tr>
+    <td>Category 2</td>
+    <td>85% and above marks in PCM for HSE/CBSE/ISC and valid score in Entrance Examination</td>
+    <td>with KEAM</td>
+    <td>Rs.4000/-&nbsp;</td>
+</tr>
+<tr>
+    <td>Category 3</td>
+    <td>75% and above marks in PCM for HSE/CBSE/ISC and valid score in Entrance Examination</td>
+    <td>with KEAM</td>
+    <td>Rs.6000/-</td>
+</tr>
+<tr>
+    <td>Category 4</td>
+    <td>50% and above marks in PCM for HSE/CBSE/ISC and valid score in Entrance Examination</td>
+    <td>with KEAM</td>
+    <td>Rs.8000/-</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sidebar" class="col-md-3 clearfix">
+<div class="searchCourse clearfix">
+                <ul> <li><a href="{% url 'kvmtrust' %}">
+
+                                <button type="button" class="btn btn-box">KVM Trust</button></a>
+
+                                </li> <li><a href="{% url 'courses'%}">
+
+                                <button type="button" class="btn btn-box">Our Courses</button></a>
+
+                                </li> <li><a href="{% url 'placement'%}">
+
+                                <button type="button" class="btn btn-box">Placements</button></a>
+
+                                </li> <li><a href="{% url 'university_update'%}">
+
+                                <button type="button" class="btn btn-box">University Updates</button></a>
+
+                                </li></ul>
+            </div>
+                <div class="clearfix">
+                
+                    
+                    
+                </div>   
+                         
+            </div>
+</div>
+            <div class="clear"></div>
+
+            </div>
+        </div>
+
+{% endblock %}

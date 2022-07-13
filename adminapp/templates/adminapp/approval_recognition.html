@@ -1,0 +1,91 @@
+{% extends 'adminapp/alayout.html' %}
+{% block content %}
+<link rel="stylesheet" href="../static/adminapp/css/main2.css">
+
+<div class="header-height" style="height: 130px;"></div>
+
+<div class="main-content">
+
+    <div class="wrapper">
+        <div class="container">
+        <div class="row">
+            <div class=" col-md-9  column clearfix">
+                <div class="box">
+                    <h4>Approval &amp; Recognition</h4>
+                    <div class="boxInfo">
+                        
+                        <div>
+                        <p></p><table border="1" cellpadding="1" cellspacing="1" style="width:100%">
+<tbody>
+<tr>
+    <td style="width:70%">
+    <p>KVM College of Engineering &amp; Information Technology started in 2001-2002 academic year. It is approved by the All India Council for Technical Education, affiliated to APJ Abdul Kalam Technological University and is recognized by Cochin University of Science &amp; Technology. Currently the college offers B.Tech -&nbsp;CSE, MCA and MBA (affiliated to Kerala Technological University) and MSc Biotechnology programs recognized by Cochin University of Science &amp; Technology.</p>
+
+    <p><br>
+    <a href="{{data.pdf.url}}" target="_blank"><strong>AICTE - Latest Extention Of Approval&nbsp;</strong></a><br>
+    <br>
+    <a href="http://kvmce.in/index.php/download?cat=KTU_aafl_2016-17"><strong>APJ Abdul Kalam Technological University - Affiliation&nbsp;</strong></a><br>
+    <br>
+    
+    <br>
+    <strong>AICTE - Previous Approvals&nbsp;</strong><br>
+    {% for x in eoa %}
+
+    <br>
+    <a href="{{x.pdf.url}}" target="_blank"><strong>{{x.title}}&nbsp;</strong></a>
+    <!-- : :&nbsp;<a href="http://kvmce.in/index.php/download?cat=Extention_of_Approval_KvmEngg_15"><strong>2015&nbsp;</strong></a>: :&nbsp;<a href="http://kvmce.in/index.php/download?cat=Extention_of_Approval_KvmEngg_14"><strong>2014&nbsp;</strong></a><br> -->
+    <br>
+    {% endfor %}
+
+    <!-- <a href="http://kvmce.in/index.php/download?cat=Extention_of_Approval_KvmEngg_13"><strong>2013&nbsp;</strong></a>: :&nbsp;<a href="http://kvmce.in/index.php/download?cat=Extention_of_Approval_KvmEngg_12"><strong>2012&nbsp;</strong></a>: :&nbsp;<a href="http://kvmce.in/index.php/download?cat=Extention_of_Approval_KvmEngg_11"><strong>2011&nbsp;</strong></a></p> -->
+    <!-- <br> -->
+    <br>
+    <br>
+    <br>
+    <br>
+    &nbsp;</td>
+    <td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sidebar" class="col-md-3 clearfix">
+<div class="searchCourse clearfix">
+                <ul> <li><a href="{% url 'kvmtrust' %}">
+
+                                <button type="button" class="btn btn-box">KVM Trust</button></a>
+
+                                </li> <li><a href="{% url 'courses'%}">
+
+                                <button type="button" class="btn btn-box">Our Courses</button></a>
+
+                                </li> <li><a href="{% url 'placement'%}">
+
+                                <button type="button" class="btn btn-box">Placements</button></a>
+
+                                </li> <li><a href="{% url 'university_update'%}">
+
+                                <button type="button" class="btn btn-box">University Updates</button></a>
+
+                                </li></ul>
+            </div>
+                <div class="clearfix">
+                
+                    
+                    
+                </div>   
+                         
+            </div>
+</div>
+            <div class="clear"></div>
+
+            </div>
+        </div>
+
+
+
+{% endblock %}       

@@ -1,0 +1,93 @@
+{% extends 'adminapp/alayout.html' %}
+{% block content %}
+
+
+<link rel="stylesheet" href="../static/adminapp/css/main2.css">
+
+<div class="header-height" style="height: 130px;"></div>
+
+<div class="main-content">
+
+
+    <div class="topImg clearfix wrapper">
+                
+        <img src="http://www.kvmce.in/img/slider/slider_01.jpg" alt="About Us">
+        <div class="container">
+        
+        </div>
+    </div>
+
+
+
+    <div class="wrapper">
+        <div class="container">
+        <div class="row">
+            <div class=" col-md-9  column clearfix">
+                <div class="box">
+                    <h4>University Guidelines</h4>
+                    <div class="boxInfo">
+                        
+                        <div>
+                        <p></p><p style="text-align:right">*Click on the item to download</p>
+
+<!-- <p><a href="../static/adminapp/pdf/university_guidelines/design_projct.pdf">DESIGN PROJECT</a></p> -->
+{% for x in data %}
+
+<p><a href="{{x.pdf.url}}" target="_blank">{{x.title}}</a></p>
+{% endfor %}
+
+<!-- <p><a href="../static/adminapp/pdf/university_guidelines/B.TechCurriculum(3to8semesters)2016.pdf" target="_blank">Curriculum for B.Tech Degree -Semesters III to VIII</a></p>
+
+<p><a href="../static/adminapp/pdf/university_guidelines/KTU -BTech ordinance.pdf" target="_blank">B.Tech Ordinance</a></p>
+
+<-- <p><a href="http://ktu.edu.in/data/KTU%20-BTech%20ordinance.pdf?=hDZ8YwBHTt3qpQgk%2FFTesQkfCbEBXVe7ceUIumjDvmxC6%2F2Rf%2B9rl8C4QUoinOnt">B.Tech Ordinance</a></p> -->
+
+<!-- <p><a href="../static/adminapp/pdf/university_guidelines/Amendment to B.Tech Ordince-Regulation- revised (2).pdf" target="_blank">B.Tech Ordinance - Amendments-I</a></p>
+
+<p><a href="../static/adminapp/pdf/university_guidelines/B.Tech Ordinance-Amendments-II.pdf" target="_blank">B.Tech Ordinance - Amendments-II</a></p> -->
+
+<p>&nbsp;</p>
+<p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sidebar" class="col-md-3 clearfix">
+<div class="searchCourse clearfix">
+                <ul> <li><a href="{% url 'kvmtrust' %}">
+
+                                <button type="button" class="btn btn-box">KVM Trust</button></a>
+
+                                </li> <li><a href="{% url 'courses'%}">
+
+                                <button type="button" class="btn btn-box">Our Courses</button></a>
+
+                                </li> <li><a href="{% url 'placement'%}">
+
+                                <button type="button" class="btn btn-box">Placements</button></a>
+
+                                </li> <li><a href="{% url 'university_update'%}">
+
+                                <button type="button" class="btn btn-box">University Updates</button></a>
+
+                                </li></ul>
+            </div>
+                <div class="clearfix">
+                
+                    
+                    
+                </div>   
+                         
+            </div>
+</div>
+            <div class="clear"></div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+    {% endblock %}

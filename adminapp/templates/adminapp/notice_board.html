@@ -1,0 +1,77 @@
+{% extends 'adminapp/alayout.html' %}
+{% block content %}
+<link rel="stylesheet" href="../static/adminapp/css/main2.css">
+
+<div class="header-height" style="height: 130px;"></div>
+
+<div class="main-content">
+
+    <div class="topImg clearfix wrapper">
+                
+        <img src="http://www.kvmce.in/img/slider/slider_01.jpg" alt="About Us">
+        <div class="container">
+        
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="container">
+        <div class="row">
+            <div class=" col-md-9  column clearfix">
+                <div class="box">
+                    <h4>Notice Board</h4>
+                    <div class="boxInfo">
+                        
+                        <div>
+                            {% for x in notice %}
+
+                        <p></p><p><a href="{{x.pdf.url}}">{{x.heading}}</a></p>
+
+                        {% endfor %}
+
+
+<!-- <p><a href="../static/adminapp/pdf/mba_timetable.pdf">Detailed Time Table of pending MBA S1 Regular (FT &amp; PT) (2020 scheme) March 2021 Examination</a></p> -->
+
+<!-- <p><a href="../static/adminapp/pdf/mba_timetable.pdf">Detailed Time Tables of MCA 2 year S1(R) 2020 scheme and MCA Integrated S1(R) 2020 scheme, December 2020 Examinatio</a><a href="http://www.kvmce.in/fileloader.php?fname=MTY2OTUzNzY1MC5wZGY=">ns</a></p> -->
+<p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sidebar" class="col-md-3 clearfix">
+<div class="searchCourse clearfix">
+                <ul> <li><a href="{% url 'kvmtrust' %}">
+
+                                <button type="button" class="btn btn-box">KVM Trust</button></a>
+
+                                </li> <li><a href="{% url 'courses'%}">
+
+                                <button type="button" class="btn btn-box">Our Courses</button></a>
+
+                                </li> <li><a href="{% url 'placement'%}">
+
+                                <button type="button" class="btn btn-box">Placements</button></a>
+
+                                </li> <li><a href="{% url 'university_update'%}">
+
+                                <button type="button" class="btn btn-box">University Updates</button></a>
+
+                                </li></ul>
+            </div>
+                <div class="clearfix">
+                
+                    
+                    
+                </div>   
+                         
+            </div>
+</div>
+            <div class="clear"></div>
+
+            </div>
+        </div>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,172 @@
+{% extends 'adminapp/alayout.html' %}
+{% block content %}
+<link rel="stylesheet" href="../static/adminapp/css/main2.css">
+
+<div class="header-height" style="height: 130px;"></div>
+
+<div class="main-content">
+
+
+<div class="wrapper">
+    <div class="container">
+    <div class="row">
+        <div class=" col-md-9  column clearfix">
+            <div class="box">
+                <h4>ELIGIBILITY CRITERIA </h4>
+                <div class="boxInfo">
+                    
+                    <div>
+                    <p></p><p><span style="color:#B22222"><span style="font-size:14px"><strong>Under Graduate</strong></span></span></p>
+
+<table border="1" cellpadding="0" cellspacing="0" style="width:100%" summary="DT features">
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:35%">
+<p><strong>Course</strong></p>
+</td>
+<td style="vertical-align:middle; width:30%">
+<p><strong>Duration</strong></p>
+</td>
+<td colspan="2" rowspan="1" style="vertical-align:middle; width:35%">
+<p style="text-align:center"><strong>ELIGIBILITY CRITERIA</strong></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle">
+<p>&nbsp;</p>
+
+<p><span style="color:#222222">B.Tech </span></p>
+</td>
+<td style="vertical-align:middle">
+<p>&nbsp;</p>
+
+<p><span style="color:#222222">4 Years</span></p>
+</td>
+<td rowspan="1" style="text-align:center; vertical-align:middle">
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><a href="{% url 'btechmgt'%}">Management Quota</a></p>
+</td>
+<td rowspan="1" style="text-align:center; vertical-align:middle">
+<p>&nbsp;</p>
+
+<p><a href="{% url 'btechgovt'%}">Govt. Quota</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<p><span style="color:#B22222"><span style="font-size:14px"><strong>Post Graduate</strong></span></span></p>
+
+<table border="1" cellpadding="0" cellspacing="0" style="width:100%" summary="DT features">
+<tbody>
+<tr>
+<td style="vertical-align:middle; width:35%">
+<p><strong>Course</strong></p>
+</td>
+<td style="vertical-align:middle; width:30%">
+<p><strong>Duration</strong></p>
+</td>
+<td colspan="2" rowspan="1" style="vertical-align:middle; width:35%">
+<p style="text-align:center"><strong>ELIGIBILITY CRITERIA</strong></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle">
+<p>&nbsp;</p>
+
+<p><span style="color:#333333">MBA</span></p>
+</td>
+<td style="vertical-align:middle">
+<p>&nbsp;</p>
+
+<p><span style="color:#333333">2 Years</span></p>
+</td>
+<td colspan="2" rowspan="1" style="vertical-align:middle">
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><a href="{% url 'mba_eligibility'%}">Details</a></p>
+</td>
+</tr>
+<tr>
+<td style="background-color:rgb(255, 255, 255); vertical-align:middle">
+<p>&nbsp;</p>
+
+<p><span style="color:#333333"><span style="background-color:#FFFFFF">MCA</span></span></p>
+</td>
+<td style="background-color:rgb(255, 255, 255); height:16px; vertical-align:middle">
+<p>&nbsp;</p>
+
+<p><span style="color:#333333"><span style="background-color:#FFFFFF">2 Years</span></span></p>
+</td>
+<td colspan="2" rowspan="1" style="background-color:rgb(255, 255, 255); vertical-align:middle">
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><a href="{% url 'mca_eligibility'%}"><span style="background-color:#FFFFFF">Details</span></a></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:middle">
+<p>&nbsp;</p>
+
+<p><span style="color:#333333">M.Sc Biotechnology</span></p>
+</td>
+<td style="vertical-align:middle">
+<p>&nbsp;</p>
+
+<p><span style="color:#333333">2 Years</span></p>
+</td>
+<td colspan="2" rowspan="1" style="vertical-align:middle">
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><a href="http://www.kvmce.in/pages/eligibility-mbt">Details</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+<p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="sidebar" class="col-md-3 clearfix">
+<div class="searchCourse clearfix">
+            <ul> <li><a href="{% url 'kvmtrust' %}">
+
+                            <button type="button" class="btn btn-box">KVM Trust</button></a>
+
+                            </li> <li><a href="{% url 'courses'%}">
+
+                            <button type="button" class="btn btn-box">Our Courses</button></a>
+
+                            </li> <li><a href="{% url 'placement'%}">
+
+                            <button type="button" class="btn btn-box">Placements</button></a>
+
+                            </li> <li><a href="{% url 'university_update'%}">
+
+                            <button type="button" class="btn btn-box">University Updates</button></a>
+
+                            </li></ul>
+        </div>
+            <div class="clearfix">
+            
+                
+                
+            </div>   
+                     
+        </div>
+</div>
+        <div class="clear"></div>
+
+        </div>
+    </div>
+
+
+{% endblock %}

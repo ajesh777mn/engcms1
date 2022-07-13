@@ -1,0 +1,86 @@
+{% extends 'adminapp/alayout.html' %}
+{% block content %}
+<link rel="stylesheet" href="../static/adminapp/css/main2.css">
+
+<div class="header-height" style="height: 130px;"></div>
+
+<div class="main-content">
+
+
+    <div class="wrapper">
+        <div class="container">
+        <div class="row">
+            <div class=" col-md-9  column clearfix">
+                <div class="box">
+                    <h4>Transportation</h4>
+                    <div class="boxInfo">
+                        
+                        <div>
+                        <p></p><p><img alt="" src="../static/adminapp/img/bus.jpg" style="height:200px; width:300px"><br>
+Bus facility is available from Edappally, Fort Cochin, Arookutty, Haripad, Thrikkunnapuzha, Thakazhy, Kidangara, Kalarcode, Alappuzha Court(via Muhamma), Vaikom and Kottayam.</p>
+
+<p><strong>Conveyance&nbsp;</strong></p>
+
+<p style="margin-left:40px">1. Edappally – Pipeline -Vyttila –Kundannoor- Aroor-Eramalloor-Thuravoor - Campus</p>
+
+<p style="margin-left:40px">2. Fortkochi- Thoppumpady- Edakochi-Palluruthy- Aroor-Eramalloor-Kuthiathodu-Pattanakkad&nbsp;- Campus</p>
+
+<p style="margin-left:40px">3. Arrookutty-Vaduthala-Thrichattukulam-Panavally&nbsp;– Poochakkal-Panavally-Manappuram-Pallippuram-Campus</p>
+
+<p style="margin-left:40px">4. Thrikunnapuzha&nbsp;–Karthikappally-Nagiarkulangara-Haripad Campus</p>
+
+<p style="margin-left:40px">5. Haripad –Mahadeva temple- Danapady-Karuvatta-Thittappally-Prakkad-Amabalappuzha- Campus</p>
+
+<p style="margin-left:40px">6. Thakazhy Kadavu-Thakazhy temple-Karumady-Ambalappuzha temp[le-Kachery Mukku-Valanjavazhy-Vandanam- Campus</p>
+
+<p style="margin-left:40px">7. Kalathatt-Aravukad-S D College-YMC-Savakottapalam-Kommady-Pathirappally-Kalavoor-Kanjikuzhy-KVM Trust - Campus</p>
+
+<p style="margin-left:40px">8. Manackalchira-Kidangara-Mancompu-Nedumudy-Ramankary-Kainakary-Pallathuruthy-Pazhaveedu-Kallupalam- Campus</p>
+
+<p style="margin-left:40px">9. Alappuzha Court Jn-Thondankulangara-Kaichoondy-Thalavady-Komalapuram-Mannanchery-Muhamma-Kayippuram-Puthanangady – Campus</p>
+
+<p style="margin-left:40px">10. Kottayam – Campus(New Route Academic year 17-18 onwards)</p>
+
+<p style="margin-left:40px">11. Alappuzha railway station(beach via) – Campus(New Route Academic year 17-18 onwards)</p>
+
+<p style="margin-left:40px">12. Vaikom – Campus(New Route Academic year 17-18 onwards)</p>
+<p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sidebar" class="col-md-3 clearfix">
+<div class="searchCourse clearfix">
+                <ul> <li><a href="{% url 'kvmtrust' %}">
+
+                                <button type="button" class="btn btn-box">KVM Trust</button></a>
+
+                                </li> <li><a href="{% url 'courses'%}">
+
+                                <button type="button" class="btn btn-box">Our Courses</button></a>
+
+                                </li> <li><a href="{% url 'placement'%}">
+
+                                <button type="button" class="btn btn-box">Placements</button></a>
+
+                                </li> <li><a href="{% url 'university_update'%}">
+
+                                <button type="button" class="btn btn-box">University Updates</button></a>
+
+                                </li></ul>
+            </div>
+                <div class="clearfix">
+                
+                    
+                    
+                </div>   
+                         
+            </div>
+</div>
+            <div class="clear"></div>
+
+            </div>
+        </div>
+
+
+    {% endblock %}    

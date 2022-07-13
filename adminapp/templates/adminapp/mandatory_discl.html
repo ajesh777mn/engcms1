@@ -1,0 +1,91 @@
+{% extends 'adminapp/alayout.html' %}
+{% block content %}
+<link rel="stylesheet" href="../static/adminapp/css/main2.css">
+
+<div class="header-height" style="height: 130px;"></div>
+
+<div class="main-content">
+
+
+    <div class="topImg clearfix wrapper">
+                
+        <img src="../static/adminapp/img/campus/pic8.jpeg" alt="About Us">
+        <div class="container">
+            <p>Mandatory Disclosure</p>
+
+        
+        </div>
+    </div>
+
+
+    <div class="wrapper">
+        <div class="container">
+        <div class="row">
+            <div class=" col-md-9  column clearfix">
+                <div class="box">
+                    <h4>Mandatory Disclosure</h4>
+                    <div class="boxInfo">
+                        
+                        <div>
+                        <p></p>
+    {% for x in data %}
+
+    <p><a href="{{x.pdf.url}}" target="_blank">{{x.title}}</a></p>
+    {% endfor %}
+
+<!--
+
+
+<p>&nbsp;</p>
+
+<-- <p><span style="font-size:14px"><a href="http://www.kvmce.in/fileloader.php?fname=NTI5OTY3ODc4OS5wZGY="><span style="color:rgb(0, 0, 0)"><strong>Amendment to B.Tech regulation in credit requirement for registering to higher semester</strong></span></a></span></p> -->
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+<p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sidebar" class="col-md-3 clearfix">
+<div class="searchCourse clearfix">
+                <ul> <li><a href="{% url 'kvmtrust' %}">
+
+                                <button type="button" class="btn btn-box">KVM Trust</button></a>
+
+                                </li> <li><a href="{% url 'courses'%}">
+
+                                <button type="button" class="btn btn-box">Our Courses</button></a>
+
+                                </li> <li><a href="{% url 'placement'%}">
+
+                                <button type="button" class="btn btn-box">Placements</button></a>
+
+
+
+                                </li></ul>
+            </div>
+                <div class="clearfix">
+                
+                    
+                    
+                </div>   
+                         
+            </div>
+</div>
+            <div class="clear"></div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+    {% endblock %}

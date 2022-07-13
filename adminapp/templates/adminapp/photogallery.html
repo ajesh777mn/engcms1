@@ -1,0 +1,286 @@
+{% extends 'adminapp/alayout.html' %}
+{% block content %}
+<link rel="stylesheet" href="../static/adminapp/css/main2.css">
+
+<div class="header-height" style="height: 130px;"></div>
+
+<div class="main-content">
+
+
+
+
+
+<div class="wrapper">
+    <div class="container">
+    <div class="row">
+      {% for x in photos %}
+
+        
+        <div class=" col-md-4  column clearfix">
+
+
+
+                <div class="box">
+
+                <h4> {{x.gallery_name}}</h4>
+
+                <div class="boxInfo">
+
+                <a title="MBA" class="gHover" href="{% url 'main_gallery' id=x.id %}"><img src="{{x.photo1.url}}" class="fwidth img-responsive"></a>
+
+                <p><a href="{% url 'main_gallery' id=x.id %}">View All</a></p>
+
+                </div>
+
+                </div>
+
+                </div>
+                {% endfor %}
+
+
+                <div class=" col-md-4  column clearfix">
+
+                  <div class="box">
+
+                    <h4>INTELLI2022 By MCA</h4>
+    
+                    <div class="boxInfo">
+    
+                    <a title="MBA" class="gHover" href="{% url 'photos_intelli'%}"><img src="../static/adminapp/img/intelli/pic1.jpg" class="fwidth img-responsive"></a>
+    
+                    <p><a href="{% url 'photos_intelli'%}">View All</a></p>
+    
+                    </div>
+    
+                    </div>
+    
+                    </div>
+                    <div class=" col-md-4  column clearfix">
+    
+
+
+
+                      <div class="box">
+
+                        <h4>INDUSTRIAL VIST 21-22  MCA</h4>
+        
+                        <div class="boxInfo">
+        
+                        <a title="MBA" class="gHover" href="{% url 'photos_IVmca'%}"><img src="../static/adminapp/img/IV MCA/pic1.jpg" class="fwidth img-responsive"></a>
+        
+                        <p><a href="{% url 'photos_IVmca'%}">View All</a></p>
+        
+                        </div>
+        
+                        </div>
+        
+                        </div><div class=" col-md-4  column clearfix">
+
+
+
+
+                      
+                            <div class="box">
+
+                            <h4>PSEUDOCAST</h4>
+
+                            <div class="boxInfo">
+
+                            <a title="PSEUDOCAST" class="gHover" href="{% url 'photos_pseudocast'%}"><img src="../static/adminapp/img/PSEUDOCAST/pic1.jpeg" class="fwidth img-responsive"></a>
+
+                             <p><a href="{% url 'photos_pseudocast'%}">View All</a></p>
+
+                              </div>
+
+                            </div>
+
+                            </div><div class=" col-md-4  column clearfix">
+
+
+
+                            <div class="box">
+
+                            <h4>Placement training</h4>
+
+                            <div class="boxInfo">
+
+                            <a title="Placement training" class="gHover" href="{% url 'photos_placement_training'%}"><img src="../static/adminapp/img/Placement training/Placement training1.jpeg" class="fwidth img-responsive"></a>
+
+                             <p><a href="{% url 'photos_placement_training'%}">View All</a></p>
+
+                              </div>
+
+                            </div>
+
+                            </div><div class=" col-md-4  column clearfix">
+
+                            <div class="box">
+
+                            <h4>IEDC</h4>
+
+                            <div class="boxInfo">
+
+                            <a title="IEDC" class="gHover" href="{% url 'photos_iedc'%}"><img src="../static/adminapp/img/IEDC/pic1.JPG" class="fwidth img-responsive"></a>
+
+                             <p><a href="{% url 'photos_iedc'%}">View All</a></p>
+
+                              </div>
+
+                            </div>
+
+                            </div><div class=" col-md-4  column clearfix">
+
+                            <div class="box">
+
+                            <h4>Arts 2017</h4>
+
+                            <div class="boxInfo">
+
+                            <a title="Arts 2017" class="gHover" href="{% url 'photos_arts_2017'%}"><img src="../static/adminapp/img/Arts2017/pic1.JPG" class="fwidth img-responsive"></a>
+
+                             <p><a href="{% url 'photos_arts_2017'%}">View All</a></p>
+
+                              </div>
+
+                            </div>
+
+                            </div><div class=" col-md-4  column clearfix">
+
+                            <div class="box">
+
+                            <h4>KVM College of Engineering &amp; IT</h4>
+
+                            <div class="boxInfo">
+
+                            <a title="KVM College of Engineering &amp; IT" class="gHover" href="{% url 'photos_engclg'%}"><img src="../static/adminapp/img/KVM CEIT/pic1.jpeg" class="fwidth img-responsive"></a>
+
+                             <p><a href="{% url 'photos_engclg'%}">View All</a></p>
+
+                              </div>
+
+                            </div>
+
+                            </div><div class=" col-md-4  column clearfix">
+
+                            <div class="box">
+
+                            <h4>Sports Teams</h4>
+
+                            <div class="boxInfo">
+
+                            <a title="Sports Teams" class="gHover" href="{% url 'photos_sports'%}"><img src="../static/adminapp/img/Sports Teams/pic1.jpg" class="fwidth img-responsive"></a>
+
+                             <p><a href="{% url 'photos_sports'%}">View All</a></p>
+
+                              </div>
+
+                            </div>
+
+                            </div><div class=" col-md-4  column clearfix">
+
+                            <div class="box">
+
+                            <h4>International Workshop</h4>
+
+                            <div class="boxInfo">
+
+                            <a title="International Workshop" class="gHover" href="{% url 'photos_international_workshop'%}"><img src="../static/adminapp/img/International Workshop/pic1.jpeg" class="fwidth img-responsive"></a>
+
+                             <p><a href="{% url 'photos_international_workshop'%}">View All</a></p>
+
+                              </div>
+
+                            </div>
+
+                            </div><div class=" col-md-4  column clearfix">
+
+                            <div class="box">
+
+                            <h4>Teloz 2K15</h4>
+
+                            <div class="boxInfo">
+
+                            <a title="Teloz 2K15" class="gHover" href="{% url 'photos_teloz_2k15'%}"><img src="../static/adminapp/img/Teloz 2K15/pic1.jpeg" class="fwidth img-responsive"></a>
+
+                             <p><a href="{% url 'photos_teloz_2k15'%}">View All</a></p>
+
+                              </div>
+
+                            </div>
+
+                            </div><div class=" col-md-4  column clearfix">
+
+                            <div class="box">
+
+                            <h4>Lagori Rocks</h4>
+
+                            <div class="boxInfo">
+
+                            <a title="Lagori Rocks" class="gHover" href="{% url 'photos_lagori_rocks'%}"><img src="../static/adminapp/img/Lagori Rocks/pic1.jpeg" class="fwidth img-responsive"></a>
+
+                             <p><a href="{% url 'photos_lagori_rocks'%}">View All</a></p>
+
+                              </div>
+
+                            </div>
+
+                            </div><div class=" col-md-4  column clearfix">
+
+                            <div class="box">
+
+                            <h4>Laboratories</h4>
+
+                            <div class="boxInfo">
+
+                            <a title="Laboratories" class="gHover" href="{% url 'photos_laboratories'%}"><img src="../static/adminapp/img/Laboratories/pic1.jpeg" class="fwidth img-responsive"></a>
+
+                             <p><a href="{% url 'photos_laboratories'%}">View All</a></p>
+
+                              </div>
+
+                            </div>
+
+                            </div><div class=" col-md-4  column clearfix">
+
+                            <div class="box">
+
+                            <h4>Infrastructure</h4>
+
+                            <div class="boxInfo">
+
+                            <a title="Infrastructure" class="gHover" href="{% url 'photos_infrastructure'%}"><img src="../static/adminapp/img/Infrastructure/pic1.jpeg" class="fwidth img-responsive"></a>
+
+                             <p><a href="{% url 'photos_infrastructure'%}">View All</a></p>
+
+
+                              </div>
+
+                            </div>
+
+                            </div><div class=" col-md-4  column clearfix">
+
+                            <div class="box">
+
+                            <h4>Campus</h4>
+
+                            <div class="boxInfo">
+
+                            <a title="Campus" class="gHover" href="{% url 'photos_campus'%}"><img src="../static/adminapp/img/Campus/pic1.jpg" class="fwidth img-responsive"></a>
+
+                             <p><a href="{% url 'photos_campus'%}">View All</a></p>
+
+                              </div>
+
+                            </div>
+
+                            </div>
+        
+    </div>
+        <div class="clear"></div>
+<section>
+
+        </section>
+        </div>
+    </div>
+
+    {% endblock %}

@@ -1,0 +1,71 @@
+{% extends 'adminapp/alayout.html' %}
+{% block content %}
+<link rel="stylesheet" href="../static/adminapp/css/main2.css">
+
+<div class="header-height" style="height: 130px;"></div>
+
+<div class="main-content">
+
+    <div class="topImg clearfix wrapper">
+                
+        <img src="http://www.kvmce.in/img/slider/slider_01.jpg" alt="About Us">
+        <div class="container">
+        <p>Events</p>
+        </div>
+    </div>
+
+
+    <div class="wrapper">
+        <div class="container">
+        <div class="row">
+            <div class="blog col-md-9 clearfix">
+                <div class="box">
+                    <h4>KEAM 2021 ONLINE PREPARATION</h4>
+                    <div class="boxInfo examInfo">
+                        <ul>
+                            <li class="dateExm">31/07/2021</li>
+                        </ul>
+                        <div>
+                        
+                            <p></p><p>KEAM 2021 around the corner!!! Last min preparation tips and tricks with Mr. Tomy NT (KEAM &amp; JEE trainer, Brilliant Study Centre, Pala) on July 31, 2021 @10 AM . This is open to all the students who are Engineering aspirants .We request you to make use of this wonderful opportunity. Interested may fill and register the Google form.</p>
+
+<p>&nbsp;Registration Link : https://forms.gle/53jBDj74df7CpmJW8</p>
+<p></p>
+                           
+                        </div>
+                    </div>
+                </div>
+
+                
+                                     
+            </div>
+
+            <div id="sidebar" class="col-md-3 clearfix">
+
+                <div class="searchCourse clearfix">
+                    <ul> <li><a href="{% url 'kvmtrust' %}">
+
+                                <button type="button" class="btn btn-box">KVM Trust</button></a>
+
+                                </li> <li><a href="{% url 'courses'%}">
+
+                                <button type="button" class="btn btn-box">Our Courses</button></a>
+
+                                </li> <li><a href="{% url 'placement'%}">
+
+                                <button type="button" class="btn btn-box">Placements</button></a>
+
+                                </li> <li><a href="http://www.kvmce.in/pages/university-updates">
+
+                                <button type="button" class="btn btn-box">University Updates</button></a>
+
+                                </li></ul>
+                </div>
+                         
+                         
+            </div> 
+</div>
+</div>
+        </div>
+
+{% endblock %}

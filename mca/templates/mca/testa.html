@@ -1,0 +1,217 @@
+{% extends 'adminapp/alayout.html' %}
+{% block content %}
+<link rel="stylesheet" href="../static/adminapp/css/main2.css">
+
+<div class="header-height" style="height: 130px;"></div>
+
+<div class="main-content">
+
+    <div class="topImg clearfix wrapper">
+
+                
+
+        <img src="http://www.kvmce.in/img/slider/slider_01.jpg" alt="About Us">
+
+        <div class="container">
+
+         <p>Faculty Profile</p>
+
+        </div>
+
+    </div>
+
+
+    <div class="wrapper">
+
+        <div class="container">
+
+        <div class="row">
+
+            <div class="blog col-md-9 clearfix">
+
+                <div class="box">
+
+                    <h4>Testa K U</h4>
+
+                    <div class="boxInfo examInfo">
+
+                        
+
+                        <div class="row"> 
+
+                        <div class="col-md-5">
+                        <div class="faculty-det-box">
+                        <div class="faculty-detbox">
+
+                       <img src="../static/adminapp/img/faculty/testa.jpeg" alt="Lakshmi S Dutt" class=" img-responsive">
+                        
+                        </div>
+                      </div>
+                          <p></p><div class="event-vanue">
+
+                        <table>
+
+                          <tbody><tr>
+
+                            <td colspan="2"><h4>Profile Summary</h4></td>
+
+                          </tr>
+
+                          <tr>
+
+                            <td width="29%"><p class="color">Designation:</p></td>
+
+                            <td width="71%"><strong>Asst. Professor</strong></td>
+
+                          </tr>
+
+                          <tr>
+
+                            <td><p class="color">Qualifications:</p></td>
+
+                            <td><strong>Mca</strong></td>
+
+                          </tr>
+
+                          <tr>
+
+                            <td><p class="color">Date of Join: </p></td>
+
+                            <td><strong></strong></td>
+
+                          </tr>
+
+                          <tr>
+
+                            <td><p class="color">Email: </p></td>
+
+                            <td><strong>testaunni7@gmail.com</strong></td>
+
+                          </tr>
+
+                          <tr>
+
+                            <td><p class="color">Experience: </p></td>
+
+                            <td><strong> 4years.</strong></td>
+
+                          </tr>
+
+                        </tbody></table>
+
+              </div> <p></p>
+
+                            </div>
+
+                            <div class="col-md-7">
+
+                            <p></p><p class="normal">Specialisation: Software Engineering</p><p></p>
+
+                           </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+     <div>
+
+                <div class="box">
+
+                    
+
+                            
+
+                           <h4>More Informations</h4>
+
+                    <div class="boxInfo">
+
+                        <div class="accordion"><div class="box opened">
+
+                                <a href="#">Paper Publication </a>
+
+                                <div class="boxInfo acText" style="display: block;">
+
+                                    <p></p><p>Handling of uncertainty - A Survey was published in International Journal of Scientific and Research Publications, volume 3, Issue 1, January 2013.</p>
+
+                                    <p></p>
+
+                                </div>
+
+                            </div></div>
+
+                    </div>                                     
+
+                            
+
+                        
+
+                </div>
+
+            </div>
+
+            </div>
+
+            <div id="sidebar" class="col-md-3 clearfix">
+
+<div class="searchCourse clearfix">
+
+                <!-- <ul> <li><a href="http://www.kvmce.in/pages/kvm-trust">
+
+                                <button type="button" class="btn btn-box">KVM Trust</button></a>
+
+                                </li> <li><a href="http://www.kvmce.in/pages/courses">
+
+                                <button type="button" class="btn btn-box">Our Courses</button></a>
+
+                                </li> <li><a href="http://www.kvmce.in/pages/placement">
+
+                                <button type="button" class="btn btn-box">Placements</button></a>
+
+                                </li> <li><a href="http://www.kvmce.in/pages/university-updates">
+
+                                <button type="button" class="btn btn-box">University Updates</button></a>
+
+                                </li></ul> -->
+
+            </div>
+  
+                <div class="clearfix">
+
+                
+
+                    <ul><li><a href="{% url 'mcaintro'%}"><button type="button" class="btn btn-box">M C A</button></a></li>
+                        <li><a href="{% url 'mcaadmission'%}"><button type="button" class="btn btn-box">Admission </button></a></li>
+                        <!-- <li><a href="http://www.kvmce.in/department/m-c-a/innovative-project-mca"><button type="button" class="btn btn-box">Innovative Project Works</button></a></li> -->
+                        <li><a href="{% url 'mcasyllabus'%}"><button type="button" class="btn btn-box">Syllabus </button></a></li>
+                        <li><a href="{% url 'mcaprequestions'%}"><button type="button" class="btn btn-box">MCA Previous Questions KTU</button></a></li>
+                        <li><a href="{% url 'mcaextra'%}"><button type="button" class="btn btn-box">Extracurricular activities</button></a></li>
+                        <li><a href="{% url 'mcafaculty'%}"><button type="button" class="btn btn-box">Faculty</button></a></li>
+
+                    
+
+                </ul></div>   
+
+                         
+
+            </div>
+
+</div>
+
+            <div class="clear"></div>
+
+
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+    {% endblock %}

@@ -1,0 +1,552 @@
+{% extends 'adminapp/alayout.html' %}
+{% block content %}
+
+
+<div class="header-height" style="height: 130px;"></div>
+
+<div class="main-content">
+    <section>
+        <style>
+            .icon-float {
+        position: fixed;
+        background-color: darkgoldenrod;
+        /* left: 0px; */
+        top: 35%;
+        z-index: 999;
+        right: 0px;
+    }
+        </style>
+          <div class="icon-float">
+                    
+            <ul>
+                <!-- <li><a href="#" class="sh">1k <br> Share</a> </li> -->
+                <!-- <li><a href="https://www.facebook.com/mlmce/" class="fb1"><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>
+                <li><a href="http://mail.google.com/" class="gp1"><i class="fa fa-google-plus" aria-hidden="true"></i></a> </li>
+                <li><a href="https://twitter.com/login?lang=en" class="tw1"><i class="fa fa-twitter" aria-hidden="true"></i></a> </li>
+                <li><a href="https://www.linkedin.com/login" class="li1"><i class="fa fa-linkedin" aria-hidden="true"></i></a> </li>
+                <li><a href="https://web.whatsapp.com/" class="wa1"><i class="fa fa-whatsapp" aria-hidden="true"></i></a> </li>
+                <li><a href="http://mail.google.com/" class="sh1"><i class="fa fa-envelope-o" aria-hidden="true"></i></a> </li> -->
+                
+                <li><a href="#" class="fb1" style="color:black">Admission Enquiry</a> </li>
+                <li><a href="#" class="li1" style="color:black">Admission Form</a> </li>
+                
+                
+                
+                <li><a href="#" class="tw1" style="color:black">Home</a> </li>
+                <li><a href="#" class="wa1" style="color:black">Engineering</a> </li>
+                <li><a href="#" class="fb1" style="color:black">Management</a> </li>
+                <!-- <li><a href="#" class="gp1" style="color:black">Architecture</a> </li>
+                <li><a href="#" class="tw1" style="color:black">Polytechnic</a> </li> -->
+                <li><a href="#" class="li1" style="color:black">Education</a> </li>
+                <!-- <li><a href="#" class="wa1" style="color:black">Arts &amp; Science</a> </li>
+                <li><a href="#" class="sh1" style="color:black">School</a> </li> -->
+            </ul>
+        </div>
+    
+    </section>
+    
+
+
+	
+{% include 'adminapp/slider2.html' %}
+
+
+
+
+	<section class="cta-section solid">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8">
+					<h2>By KVM Trust</h2>
+				</div>
+				<div class="col-lg-4 text-right">
+					<!-- <a href="#" class="default-btn dark">Get Appointment</a> -->
+				</div>
+			</div>
+		</div>
+	</section><!-- /.cta-section-->
+
+
+
+	{% include 'adminapp/abouthome.html' %}
+
+
+
+	<!--   <section id="counter" class="counter-section counter-2">
+            <div class="container">
+                <ul class="row counters">
+                    <li class="col-lg-3 col-sm-6 sm-padding">
+                        <div class="counter-content">
+                            <i class="flaticon-worker"></i>
+                            <div class="counter-details">
+                                <h3 class="counter">570</h3>
+                                <h4>Experts Engineers</h4>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-lg-3 col-sm-6 sm-padding">
+                        <div class="counter-content">
+                            <i class="flaticon-factory"></i>
+                            <div class="counter-details">
+                                <h3 class="counter">898</h3>
+                                <h4>Construction Projects</h4>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-lg-3 col-sm-6 sm-padding">
+                        <div class="counter-content">
+                            <i class="flaticon-refinery"></i>
+                            <div class="counter-details">
+                                <h3 class="counter">105</h3>
+                                <h4>Factories WordWide</h4>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-lg-3 col-sm-6 sm-padding">
+                        <div class="counter-content">
+                            <i class="flaticon-assembly-line"></i>
+                            <div class="counter-details">
+                                <h3 class="counter">898</h3>
+                                <h4>Satisfied Customers</h4>
+                            </div>
+                        </div>
+                    </li>
+                </ul>    << /.counters 
+            </div>  -->
+	</section>
+	<!-- /.counter-section -->
+	<!-- /.our departments -->
+
+	<section class="service-section section-2 bd-bottom padding">
+		<div class="container">
+			<div class="section-heading text-center mb-40">
+				<span>Our</span>
+				<h2>Departments</h2>
+			</div>
+			<div class="service-wrap row">
+                {% for x in dept %}
+
+				<div class="col-lg-4 col-sm-6 sm-padding">
+					<div class="service-box">
+						<div class="service-thumb">
+							<a href="{% url 'course_intro' id=x.id %}"><img src="{{x.pic.url}}" alt="img"></a>
+						</div>
+						<div class="service-content">
+							<h3><a href="{% url 'course_intro' id=x.id %}">{{x.dept_name}}</a></h3>
+							<p>{{x.description}} </p>
+                            <a href="{% url 'course_intro' id=x.id %}" class="read-more">Read More</a>
+						</div>
+					</div>
+				</div>
+                {% endfor %}
+
+				<!--item-1--
+				<div class="col-lg-4 col-sm-6 sm-padding">
+					<div class="service-box">
+						<div class="service-thumb">
+							<a href="{% url 'mcaintro'%}"><img src="../static/adminapp/img/mca.jpeg" alt="img"></a>
+						</div>
+						<div class="service-content">
+							<h3><a href="{% url 'mcaintro'%}">MCA</a></h3>
+							<p>The goal of the department is to “Craft excellent IT professionals with moral values”</p>
+							<a href="{% url 'mcaintro'%}" class="read-more">Read More</a>
+						</div>
+					</div>
+				</div>
+				<--item-2--
+				<div class="col-lg-4 col-sm-6 sm-padding">
+					<div class="service-box">
+						<div class="service-thumb">
+							<a href="{% url 'mbaintro'%}"><img src="../static/adminapp/img/mba.jpg" alt="img"></a>
+						</div>
+						<div class="service-content">
+							<h3><a href="{% url 'mbaintro'%}">MBA</a></h3>
+							<p>KVM MBA is all set to re-define the management education across B-schools.</p>
+							<a href="{% url 'mbaintro'%}" class="read-more">Read More</a>
+						</div>
+					</div>
+				</div>
+				<--item-3-->
+			</div>
+			<!-- <div class="text-center mt-40"><a href="#" class="default-btn">View All courses</a></div> -->
+		</div>
+	</section><!-- /.service-section-->
+	<!--
+       <section class="project-section project-2 bd-bottom bg-grey padding">
+           <div class="container">
+                <div class="row filter-wrap">
+                    <div class="col-lg-6">
+                        <div class="section-heading">
+                           <span>Projects</span>
+                           <h2>Checkout Our Latest Projects</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 text-right">
+                        <ul class="project-filter">
+                            <li class="active" data-filter="*">All</li>
+                            <li data-filter=".construction">Construction</li>
+                            <li data-filter=".renovation">Renovation</li>
+                            <li data-filter=".designing">Designing</li>
+                            <li data-filter=".industrial">Industrial</li>
+                        </ul><-- /.Project-filter 
+                    </div>
+                </div>
+                <div class="row project-items" style="position: relative; height: 446.624px;">
+                    <div class="col-lg-4 col-sm-6 padding-15 single-item construction renovation" style="position: absolute; left: 0px; top: 0px;">
+                        <div class="project-box">
+                          <img src="../static/adminapp/img/project-1.jpg" alt="img">
+                           <div class="project-inner">
+                                <div class="project-details">
+                                    <h3><a href="#">Empire State Building <span>September 2018</span></a></h3> 
+                                </div>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 padding-15 single-item designing industrial" style="position: absolute; left: 319px; top: 0px;">
+                        <div class="project-box">
+                          <img src="../static/adminapp/img/project-2.jpg" alt="img">
+                           <div class="project-inner">
+                                <div class="project-details">
+                                    <h3><a href="#">World Trade Center <span>September 2018</span></a></h3> 
+                                </div>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 padding-15 single-item construction designing" style="position: absolute; left: 639px; top: 0px;">
+                        <div class="project-box">
+                          <img src="../static/adminapp/img/project-3.jpg" alt="img">
+                           <div class="project-inner">
+                                <div class="project-details">
+                                    <h3><a href="#">Brij Khalifa Tower <span>September 2018</span></a></h3> 
+                                </div>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 padding-15 single-item industrial construction" style="position: absolute; left: 0px; top: 223px;">
+                        <div class="project-box">
+                          <img src="../static/adminapp/img/project-4.jpg" alt="img">
+                           <div class="project-inner">
+                                <div class="project-details">
+                                    <h3><a href="#">Park Evenue Building <span>September 2018</span></a></h3> 
+                                </div>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 padding-15 single-item designing renovation" style="position: absolute; left: 319px; top: 223px;">
+                        <div class="project-box">
+                          <img src="../static/adminapp/img/project-5.jpg" alt="img">
+                           <div class="project-inner">
+                                <div class="project-details">
+                                    <h3><a href="#">Sydney Opera House <span>September 2018</span></a></h3> 
+                                </div>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 padding-15 single-item industrial designing" style="position: absolute; left: 639px; top: 223px;">
+                        <div class="project-box">
+                          <img src="../static/adminapp/img/project-6.jpg" alt="img">
+                           <div class="project-inner">
+                                <div class="project-details">
+                                    <h3><a href="#">Hotel La Maredian <span>September 2018</span></a></h3> 
+                                </div>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+           </div>
+       </section><--project-section-->
+
+	<section class="team-section bg-grey">
+		<div class="team-bg"></div>
+		<div class="container">
+			<div class="section-heading text-center mb-40">
+				<span>Team</span>
+				<h2>Our Experience Team</h2>
+			</div>
+			<div class="row team-wrap">
+                {% for x in exp_team %}
+
+				<div class="col-lg-3 col-sm-6 sm-padding">
+					<div class="team-box">
+						<div class="team-thumb">
+							<!-- <img src="../static/adminapp/img/manjulamiss.JPEG" alt="img"> -->
+                            <a href="{% url 'team' id=x.id %}"><img src="{{x.photo.url}}" alt="img"></a>
+							<ul class="team-social">
+								<li><a href="#"><i class="fab fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+								<li><a href="#"><i class="fab fa-behance"></i></a></li>
+							</ul>
+						</div>
+						<div class="team-content">
+							<h3>{{x.name}} <span class="position">{{x.designation}}</span></h3>
+						</div>
+					</div>
+				</div>
+                {% endfor %}
+
+				<!-- <div class="col-lg-3 col-sm-6 sm-padding">
+					<div class="team-box">
+						<div class="team-thumb">
+							<a href="{% url 'drannkavithamathew' %}"><img src="../static/adminapp/img/faculty/DrAnn Kavitha Mathew.JPEG" alt="img"></a>
+							<ul class="team-social">
+								<li><a href="#"><i class="fab fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+								<li><a href="#"><i class="fab fa-behance"></i></a></li>
+							</ul>
+						</div>
+						<div class="team-content">
+							<h3>Dr.Ann Kavitha Mathew <span class="position">Director (MBA)</span></h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6 sm-padding">
+					<div class="team-box">
+						<div class="team-thumb">
+							<a href="{% url 'darsanaramachandran' %}"><img src="../static/adminapp/img/faculty/DARSANA RAMACHANDRAN.jpeg" alt="img"></a>
+							<ul class="team-social">
+								<li><a href="#"><i class="fab fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+								<li><a href="#"><i class="fab fa-behance"></i></a></li>
+							</ul>
+						</div>
+						<div class="team-content">
+							<h3>DARSANA RAMACHANDRAN <span class="position">HOD MCA, Associate Professor</span></h3>
+						</div>
+					</div>
+				</div> -->
+
+                
+				<!-- <div class="col-lg-3 col-sm-6 sm-padding">
+					<div class="team-box">
+						<div class="team-thumb">
+							<img src="../static/adminapp/img/faculty/V. Anoop Kumar.JPG" alt="img">
+							<ul class="team-social">
+								<li><a href="#"><i class="fab fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+								<li><a href="#"><i class="fab fa-behance"></i></a></li>
+							</ul>
+						</div>
+						<div class="team-content">
+							<h3>Dr. V. Anoop Kumar <span class="position">Professor</span></h3>
+						</div>
+					</div>
+				</div> -->
+			</div>
+		</div>
+	</section>
+	<!--team-section-->
+
+	<!--
+
+        <section class="testimonial-section bd-bottom padding">
+            <div class="container">
+                <div class="section-heading mb-40">
+                   <span>Reviews</span>
+                   <h2>What Our Clients Says</h2>
+                </div>
+                <div id="testimonial-carousel" class="testimonial-carousel owl-carousel owl-theme owl-loaded">
+                    
+                    
+                    
+                <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-1417.5px, 0px, 0px); transition: all 0.5s ease 0s; width: 3307.5px;"><div class="owl-item cloned" style="width: 457.5px; margin-right: 15px;"><div class="testimonial-item">
+                       <div class="testi-thumb"><img src="../static/adminapp/img/testimonial-2.jpg" alt="profile"></div>
+                       <div class="testi-content">
+                            <p>Mathematics as an expression of the human mind reflects the active will, the contemplative reason, and the desire for perfection. Its basic elements are logic and intuition, analysis and construction.</p>
+                            <h4>Michel Brown <span>CEO Industrial Inc.</span></h4>
+                        </div>
+                    </div></div><div class="owl-item cloned" style="width: 457.5px; margin-right: 15px;"><div class="testimonial-item">
+                        <div class="testi-thumb"><img src="../static/adminapp/img/testimonial-3.jpg" alt="profile"></div>
+                        <div class="testi-content">
+                            <p>Mathematics as an expression of the human mind reflects the active will, the contemplative reason, and the desire for perfection. Its basic elements are logic and intuition, analysis and construction.</p>
+                            <h4>Jonathan Smith <span>CEO Construction Inc.</span></h4>
+                        </div>
+                    </div></div><div class="owl-item" style="width: 457.5px; margin-right: 15px;"><div class="testimonial-item">
+                        <div class="testi-thumb"><img src="../static/adminapp/img/testimonial-1.jpg" alt="profile"></div>
+                        <div class="testi-content">
+                            <p>Mathematics as an expression of the human mind reflects the active will, the contemplative reason, and the desire for perfection. Its basic elements are logic and intuition, analysis and construction.</p>
+                            <h4>Angelina Rose <span>CEO Machanical Inc.</span></h4>
+                        </div>
+                    </div></div><div class="owl-item active" style="width: 457.5px; margin-right: 15px;"><div class="testimonial-item">
+                       <div class="testi-thumb"><img src="../static/adminapp/img/testimonial-2.jpg" alt="profile"></div>
+                       <div class="testi-content">
+                            <p>Mathematics as an expression of the human mind reflects the active will, the contemplative reason, and the desire for perfection. Its basic elements are logic and intuition, analysis and construction.</p>
+                            <h4>Michel Brown <span>CEO Industrial Inc.</span></h4>
+                        </div>
+                    </div></div><div class="owl-item active" style="width: 457.5px; margin-right: 15px;"><div class="testimonial-item">
+                        <div class="testi-thumb"><img src="../static/adminapp/img/testimonial-3.jpg" alt="profile"></div>
+                        <div class="testi-content">
+                            <p>Mathematics as an expression of the human mind reflects the active will, the contemplative reason, and the desire for perfection. Its basic elements are logic and intuition, analysis and construction.</p>
+                            <h4>Jonathan Smith <span>CEO Construction Inc.</span></h4>
+                        </div>
+                    </div></div><div class="owl-item cloned" style="width: 457.5px; margin-right: 15px;"><div class="testimonial-item">
+                        <div class="testi-thumb"><img src="../static/adminapp/img/testimonial-1.jpg" alt="profile"></div>
+                        <div class="testi-content">
+                            <p>Mathematics as an expression of the human mind reflects the active will, the contemplative reason, and the desire for perfection. Its basic elements are logic and intuition, analysis and construction.</p>
+                            <h4>Angelina Rose <span>CEO Machanical Inc.</span></h4>
+                        </div>
+                    </div></div><div class="owl-item cloned" style="width: 457.5px; margin-right: 15px;"><div class="testimonial-item">
+                       <div class="testi-thumb"><img src="../static/adminapp/img/testimonial-2.jpg" alt="profile"></div>
+                       <div class="testi-content">
+                            <p>Mathematics as an expression of the human mind reflects the active will, the contemplative reason, and the desire for perfection. Its basic elements are logic and intuition, analysis and construction.</p>
+                            <h4>Michel Brown <span>CEO Industrial Inc.</span></h4>
+                        </div>
+                    </div></div></div></div><div class="owl-controls"><div class="owl-nav"><div class="owl-prev" style="display: none;">prev</div><div class="owl-next" style="display: none;">next</div></div><div class="owl-dots" style=""><div class="owl-dot active"><span></span></div><div class="owl-dot"><span></span></div></div></div></div>
+            </div>
+        </section><-- testimonial-section -->
+
+	<!--contact us
+
+        <section class="callout-section bd-bottom padding">
+            <div class="callout-bg"></div>
+            <div class="container">
+                <div class="callout-wrap row align-items-stretch no-gutters">
+                    <div class="col-lg-8 col-md-6 xs-padding">
+                        <div class="callout-form">
+                            <div class="section-heading mb-40">
+                               <span>Callout</span>
+                               <h2>Drop Us Messge For Any Query</h2>
+                            </div>
+                            <form action="https://html.dynamiclayers.net/dl/wengty/quote.php" method="post" id="quote_form">
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="quote-name" name="quote-name" placeholder="Your Name" required="">
+                                    </div>
+                                    <div class="col-sm-6">
+                                       <input type="email" class="form-control" id="quote-email" name="quote-email" placeholder="Your Email" required="">
+                                   </div>
+                                </div>
+                                <div class="form-group row">
+                                   <div class="col-sm-6">
+                                       <select class="form-control" id="quote-service" name="quote-service" required="" style="display: none;">
+                                        <option value="1">Select Services</option>
+                                        <option value="2">Construction Service</option>
+                                        <option value="3">Industrial Service</option>
+                                        <option value="4">Factory Renovation</option>
+                                      </select><div class="nice-select form-control" tabindex="0"><span class="current">Select Services</span><ul class="list"><li data-value="1" class="option selected">Select Services</li><li data-value="2" class="option">Construction Service</li><li data-value="3" class="option">Industrial Service</li><li data-value="4" class="option">Factory Renovation</li></ul></div>
+                                   </div>
+                                   <div class="col-sm-6">
+                                       <button class="submit-btn">Get a Quote</button>
+                                   </div>
+                                </div>
+                                <div id="form-messages" class="alert" role="alert"></div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 xs-padding bg-dark">
+                        <div class="callout-info">
+                            <ul class="callout-list">
+                                <li>
+                                    <i class="icon-phone"></i>
+                                    <h3>Contact Number <span>+31 001-836-4321</span></h3>
+                                </li>
+                                <li>
+                                    <i class="icon-envelope"></i>
+                                    <h3>Send us an email. <span>office@example.com</span></h3>
+                                </li>
+                                <li>
+                                    <i class="icon-clock"></i>
+                                    <h3>Working Hours <span>Mon - Sat: 9:00 - 19:00</span></h3>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><-- /.callout-section-->
+
+        <!-- section -->
+        <!-- Page Wrap -->
+        
+
+		<!-- /.News and updates -->
+			
+	<section class="blog-section bg-grey bd-bottom padding">
+		<div class="container">
+			<div class="section-heading mb-40">
+				<span>Blog</span>
+				<h2>News Updates</h2>
+			</div>
+			<div class="row post-wrap">
+                {% for x in news %}
+
+				<div class="col-lg-4 col-sm-6 sm-padding">
+					<div class="blog-item">
+						<div class="post-thumb">
+							<img src="{{x.photo.url}}" alt="img">
+						</div>
+						<div class="post-content-wrap">
+							<div class="post-meta">
+								<span><i class="fas fa-clock"></i>Posted on {{x.post_date}}</span>
+								<!-- <span><i class="fas fa-user-tag"></i>Jonathan Smith</span> -->
+							</div>
+							<div class="post-content">
+								<h3><a href="{% url 'news_events' id=x.id %}">{{x.title}}</a></h3>
+								<!-- <p>Home renovations, especially those involving plentiful of demolition can be a very dusty affair. This
+									nasty dust can easily free flow through the air and into your house.</p> -->
+								<a href="{% url 'news_events' id=x.id %}" class="read-more">Read More</a>
+							</div>
+						</div>
+
+
+						<!--item-1-->
+					</div>
+				</div>
+                {% endfor %}
+
+				<!-- <div class="col-lg-4 col-sm-6 sm-padding">
+					<div class="blog-item">
+						<div class="post-thumb">
+							<img src="../static/adminapp/img/news_updates/intelli2022.JPEG" alt="img">
+						</div>
+						<div class="post-content-wrap">
+							<div class="post-meta">
+								<span><i class="fas fa-clock"></i>Posted on March 22 2022</span>
+								<-- <span><i class="fas fa-user-tag"></i>Jonathan Smith</span> --
+							</div>
+							<div class="post-content">
+							</div>
+						</div>
+					</div>
+					<--item-2--
+				</div> --
+				<div class="col-lg-4 col-sm-6 sm-padding">
+					<div class="blog-item">
+						<div class="post-thumb">
+							<img src="../static/adminapp/img/post-3.jpg" alt="img">
+						</div>
+						<div class="post-content-wrap">
+							<div class="post-meta">
+								<span><i class="fas fa-clock"></i>January 15 2019</span>
+								<span><i class="fas fa-user-tag"></i>Jonathan Smith</span>
+							</div>
+							<div class="post-content">
+								<h3><a href="#">Essentials bonds and insurance for construction companies.</a></h3>
+								<p>Home renovations, especially those involving plentiful of demolition can be a very dusty affair. This
+									nasty dust can easily free flow through the air and into your house.</p>
+								<a href="#" class="read-more">Read More</a>
+
+
+							</div>
+
+
+						</div>
+
+					<-- </div> --
+
+					--item-3-->
+
+
+
+
+			</div>
+		</div>
+        <!-- <div class="text-center mt-40"><a href="{% url 'all_events'%}" class="default-btn">View All</a></div> -->
+
+	</section><!-- Blog Section -->
+
+
+	{% endblock %}

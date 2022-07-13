@@ -1,0 +1,93 @@
+{% extends 'adminapp/alayout.html' %}
+{% block content %}
+
+<link rel="stylesheet" href="../static/adminapp/css/main2.css">
+
+<div class="header-height" style="height: 130px;"></div>
+
+<div class="main-content">
+
+
+    <div class="wrapper">
+        <div class="container">
+        <div class="row">
+            <div class=" col-md-9  column clearfix">
+                <div class="box">
+                    <h4>Introduction</h4>
+                    <div class="boxInfo">
+                        
+                        <div>
+                        <p></p><h2 style="text-align:center">{{data.dept_name}}</h2>
+
+<div class="account-pass" style="box-sizing: border-box; padding: 1.5em 0px 0px;">
+<div class="col-md-9 account-top" style="box-sizing: border-box; position: relative; min-height: 1px; padding-right: 15px; padding-left: 15px; float: left; width: 855px; color: rgb(51, 51, 51); font-family: ">
+<table class="tsc_table_s4" style="background-color:transparent; border-collapse:collapse; border-spacing:0px; border:1px solid rgb(204, 204, 204); box-sizing:border-box; max-width:100%; width:825px" summary="Sample Table">
+<thead>
+<tr>
+    <th scope="col" style="text-align:left">Course</th>
+    <th scope="col" style="text-align:left">Duration</th>
+    <th scope="col" style="text-align:left">Intake</th>
+    <th scope="col" style="text-align:left">&nbsp;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td style="text-align:left">{{data.course_name}}</td>
+    <td>{{data.duration}}</td>
+    <td>{{data.intake}}</td>
+    <td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<p style="text-align:justify">{{data.description1}}</p>
+<p style="text-align:justify">{{data.description2}}</p>
+<p style="text-align:justify">{{data.description3}}</p>
+<p style="text-align:justify">{{data.description4}}</p>
+
+
+&nbsp;
+
+<!-- <p style="text-align:justify">Computer science has many sub-fields; some, such as computational complexity theory, study the fundamental properties of computational problems, while others, such as computer graphics, emphasize the computation of specific results. Still others focus on the challenges in implementing computations. For example, programming language theory studies approaches to describe computations, while computer programming applies specific programming languages to solve specific computational problems, and human-computer interaction focuses on the challenges in making computers and computations useful, usable, and universally accessible to humans.</p> -->
+
+<p style="text-align:justify"><a href="http://application.kvmce.in">Apply Now</a></p>
+</div>
+</div>
+<p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sidebar" class="col-md-3 clearfix">
+<div class="searchCourse clearfix">
+                <ul><li><a href="#"><button type="button" class="btn btn-box">Introduction</button></a></li>
+                    <li><a href="{% url 'faculty'%}">
+
+                                        <button type="button" class="btn btn-box">List of Faculty</button>
+
+                                        </a></li></ul>
+            </div>
+                <div class="clearfix">
+                
+                    <div class="box">
+
+                                        <!-- <h4>Related Links</h4> -->
+
+                                           <div class="boxInfo archives">
+
+                                         <!-- <ul><li><a href="http://www.kvmce.in/department/computer-science-engineering/innovative-project-cse">Innovative Project Works</a></li><li><a href="http://www.kvmce.in/pages/btech-govt-quota">Admission - Govt Quota </a></li><li><a href="http://www.kvmce.in/pages/btech-mgmt-quota">Admission - Management Quota</a></li><li><a href="http://www.kvmce.in/pages/btech-nri-quota	">Admission- NRI Quota</a></li></ul></div> -->
+
+                                                </div>
+                    
+                </div>   
+                         
+            </div>
+</div>
+            <div class="clear"></div>
+
+            </div>
+        </div>
+
+{% endblock %}

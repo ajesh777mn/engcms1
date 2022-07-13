@@ -1,0 +1,73 @@
+{% extends 'adminapp/alayout.html' %}
+{% block content %}
+<link rel="stylesheet" href="../static/adminapp/css/main2.css">
+
+<div class="header-height" style="height: 130px;"></div>
+
+<div class="main-content">
+
+    <div class="wrapper">
+        <div class="container">
+        <div class="row">
+            <div class=" col-md-9  column clearfix">
+                <div class="box">
+                    <h4>Vision &amp; Mission</h4>
+                    <div class="boxInfo">
+                        
+                        <div>
+                        <p></p><h2><strong>Vision</strong></h2>
+
+<p style="margin-left:40px"><span style="color:#000000"><span style="font-size:14px"><strong>To be the “Desired Destination” for Education and Research in Technical &amp; Management stream.</strong></span></span></p>
+
+<h2><strong>Mission</strong></h2>
+
+<ul>
+<li><span style="font-size:14px"><span style="color:#000000"><strong>Providing&nbsp;Quality Education for students to make them competent and confident to succeed in professional practice and advanced learning.</strong></span></span></li>
+<li><span style="font-size:14px"><span style="color:#000000"><strong>Strengthen the Educational Social Responsibilities (ESR) of the institution.</strong></span></span></li>
+<li><span style="font-size:14px"><span style="color:#000000"><strong>Infusing the culture of Ethical practices to be followed in Technical &amp; Management profession.</strong></span></span></li>
+</ul>
+<p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sidebar" class="col-md-3 clearfix">
+<div class="searchCourse clearfix">
+                <ul> <li><a href="{% url 'kvmtrust' %}">
+
+                                <button type="button" class="btn btn-box">KVM Trust</button></a>
+
+                                </li> <li><a href="{% url 'courses'%}">
+
+                                <button type="button" class="btn btn-box">Our Courses</button></a>
+
+                                </li> <li><a href="{% url 'placement'%}">
+
+                                <button type="button" class="btn btn-box">Placements</button></a>
+
+                                </li> <li><a href="{% url 'university_update'%}">
+
+                                <button type="button" class="btn btn-box">University Updates</button></a>
+
+                                </li></ul>
+            </div>
+                <div class="clearfix">
+                
+                    
+                    
+                </div>   
+                         
+            </div>
+</div>
+            <div class="clear"></div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+{% endblock %}
+ 

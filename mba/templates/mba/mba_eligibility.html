@@ -1,0 +1,70 @@
+{% extends 'adminapp/alayout.html' %}
+{% block content %}
+<link rel="stylesheet" href="../static/adminapp/css/main2.css">
+
+<div class="header-height" style="height: 130px;"></div>
+
+<div class="main-content">
+
+    <div class="wrapper">
+        <div class="container">
+        <div class="row">
+            <div class=" col-md-9  column clearfix">
+                <div class="box">
+                    <h4>MBA Eligibility </h4>
+                    <div class="boxInfo">
+                        
+                        <div>
+                        <p></p><p><strong>MBA</strong></p>
+
+<p style="margin-left:40px"><strong><span style="color:#333333">Eligibility</span></strong></p>
+
+<p style="margin-left:40px"><span style="color:#333333">A pass in degree examination with minimum 50% marks in aggregate for Arts/Commerce /Science/ Engineering. Final year students are also eligible to apply<br>
+Good score in any Management Aptitude Test- C-MAT / CAT / KMAT</span></p>
+
+<p style="margin-left:40px"><strong><span style="color:#333333">Selection</span></strong></p>
+
+<p style="margin-left:40px"><span style="color:#333333">The selection of candidates is purely based on merit. Admission to the MBA programme is determined by the scores obtained by the candidate in the admission test, group discussion,personal interview and a consistent academic record .</span></p>
+<p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sidebar" class="col-md-3 clearfix">
+<div class="searchCourse clearfix">
+                <ul> <li><a href="{% url 'kvmtrust' %}">
+
+                                <button type="button" class="btn btn-box">KVM Trust</button></a>
+
+                                </li> <li><a href="{% url 'courses'%}">
+
+                                <button type="button" class="btn btn-box">Our Courses</button></a>
+
+                                </li> <li><a href="{% url 'placement'%}">
+
+                                <button type="button" class="btn btn-box">Placements</button></a>
+
+                                </li> <li><a href="http://www.kvmce.in/pages/university-updates">
+
+                                <button type="button" class="btn btn-box">University Updates</button></a>
+
+                                </li></ul>
+            </div>
+                <div class="clearfix">
+                
+                    
+                    
+                </div>   
+                         
+            </div>
+</div>
+            <div class="clear"></div>
+
+            </div>
+        </div>
+
+
+
+
+
+{% endblock %}

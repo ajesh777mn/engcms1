@@ -1,0 +1,82 @@
+{% extends 'adminapp/alayout.html' %}
+{% block content %}
+<link rel="stylesheet" href="../static/adminapp/css/main2.css">
+
+<div class="header-height" style="height: 130px;"></div>
+
+<div class="main-content">
+
+    <div class="topImg clearfix wrapper">
+                
+        <img src="http://www.kvmce.in/img/slider/slider_01.jpg" alt="About Us">
+        <div class="container">
+        
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="container">
+        <div class="row">
+            <div class=" col-md-9  column clearfix">
+                <div class="box">
+                    <h4>Media Updates</h4>
+                    <div class="boxInfo">
+                        
+                        <div>
+                        <p></p><p>&nbsp;</p>
+                        {% for x in media %}
+
+
+<p><img alt="" src="{{x.photo.url}}" style="height:920px; width:448px"></p>
+
+<p>&nbsp;</p>
+{% endfor %}
+
+<!-- <p><img alt="" src="../static/adminapp/img/media_updates/media2.jpg" style="height:851px; width:681px"></p>
+
+<p>&nbsp;</p>
+
+<p><img alt="" src="../static/adminapp/img/media_updates/media3.jpg" style="height:350px; width:367px"></p>
+
+<p>&nbsp;</p> -->
+<p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sidebar" class="col-md-3 clearfix">
+<div class="searchCourse clearfix">
+                <ul> <li><a href="{% url 'kvmtrust' %}">
+
+                                <button type="button" class="btn btn-box">KVM Trust</button></a>
+
+                                </li> <li><a href="{% url 'courses'%}">
+
+                                <button type="button" class="btn btn-box">Our Courses</button></a>
+
+                                </li> <li><a href="{% url 'placement'%}">
+
+                                <button type="button" class="btn btn-box">Placements</button></a>
+
+                                </li> <li><a href="{% url 'university_update'%}">
+
+                                <button type="button" class="btn btn-box">University Updates</button></a>
+
+                                </li></ul>
+            </div>
+                <div class="clearfix">
+                
+                    
+                    
+                </div>   
+                         
+            </div>
+</div>
+            <div class="clear"></div>
+
+            </div>
+        </div>
+
+
+
+    {% endblock %}

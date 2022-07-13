@@ -1,0 +1,98 @@
+{% extends 'adminapp/alayout.html' %}
+{% block content %}
+<link rel="stylesheet" href="../static/adminapp/css/main2.css">
+
+<div class="header-height" style="height: 130px;"></div>
+
+<div class="main-content">
+
+
+    <div class="topImg clearfix wrapper">
+                
+        <img src="http://www.kvmce.in/img/slider/slider_01.jpg" alt="About Us">
+        <div class="container">
+        
+        </div>
+    </div>
+
+
+    <div class="wrapper">
+        <div class="container">
+        <div class="row">
+            <div class=" col-md-9  column clearfix">
+                <div class="box">
+                    <h4>Useful Links</h4>
+                    <div class="boxInfo">
+                        
+                        <div>
+                        <p></p>
+                        {% for x in links %}
+
+                        <p><strong> <a href="{{x.website_link}}" target="_blank">{{x.heading}}</a></strong></p>
+                       
+                        {% endfor %}
+
+<!-- <p><strong>2 . <a href="http://www.ktu.edu.in/eu/acd/academicRegulationsMba.htm?=q4bVEHqjGBRzvqzIvwPI15LSOd529KISEcLzih%2FKQGEhlPbPgzToWgVQdTTzCI8h" target="_blank">KTU - MBA Syllabus</a></strong></p> -->
+
+<!-- <p><strong>3 . <a href="http://www.ktu.edu.in/eu/acd/academicRegulation.htm?=lwgkXbOHfG1Abb2S2S5oyvgzmrDL%2FxDPEPWqAt4ofWEQ3fy0zBH9%2F3%2FBhdzNglGN" target="_blank">KTU Academic - B.Tech syllabus - 2016</a></strong></p> -->
+
+<!-- <p><strong>4 . <a href="http://www.ktu.edu.in/" target="_blank">APJ Abdul Kalam Technological University</a></strong></p> -->
+
+<!-- <p>APJ Abdul Kalam Technological University (initially Kerala Technological University), is a State Government University.</p> -->
+
+<!-- <p><strong>5 . <a href="http://www.mathguide.de/" target="_blank">MathGuide</a></strong></p> -->
+
+<!-- <p>Gateway to scholarly relevant information in Mathematics</p> -->
+
+<!-- <p><strong>6 . <a href="http://www.doaj.org/" target="_blank">Open Access Journals</a></strong></p> -->
+
+<!-- <p>Directory of Open Access Journals</p> -->
+
+<!-- <p><strong>7 . <a href="http://www.cusat.ac.in" target="_blank">CUSAT</a></strong></p>
+
+<p>Cochin University of Science &amp; Technology, Kochi.</p>
+
+<p><strong>8 . <a href="http://www.aicte-india.org" target="_blank">AICTE</a></strong></p>
+
+<p>All India Council for Technical Education, NewDelhi</p> -->
+<p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sidebar" class="col-md-3 clearfix">
+<div class="searchCourse clearfix">
+                <ul> <li><a href="{% url 'kvmtrust' %}">
+
+                                <button type="button" class="btn btn-box">KVM Trust</button></a>
+
+                                </li> <li><a href="{% url 'courses'%}">
+
+                                <button type="button" class="btn btn-box">Our Courses</button></a>
+
+                                </li> <li><a href="{% url 'placement'%}">
+
+                                <button type="button" class="btn btn-box">Placements</button></a>
+
+                                </li> <li><a href="{% url 'university_update'%}">
+
+                                <button type="button" class="btn btn-box">University Updates</button></a>
+
+                                </li></ul>
+            </div>
+                <div class="clearfix">
+                
+                    
+                    
+                </div>   
+                         
+            </div>
+</div>
+            <div class="clear"></div>
+
+            </div>
+        </div>
+
+
+
+{% endblock %}
